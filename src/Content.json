@@ -1,7 +1,7 @@
 {
     "Projcet" : [
         {
-            "Img" : "../img/RetrievalSystem.png",
+            "Img" : "/img/RetrievalSystem.png",
             "Title" : "Retrieval App",
             "Description" : "Decelopment a web app that help in customer service feature that could help user to get information they need.",
             "Link" : "https://github.com/Fadhyoung",
@@ -28,7 +28,7 @@
             "Attribute" : ["Responsive", "Strict Security", "API Adjustmen"]
         },
         {
-            "Img" : "../img/Pahe.png",
+            "Img" : "/img/Pahe.png",
             "Title" : "FCLONE - PAHE Clone Project 2023",
             "Description" : "Fclone is my personal project that focuses on cloning the appearance of certain web apps and then adjusting them to make them more distinct based on my preferences.",
             "Link" : "https://fadhyoung.github.io/pahe_clone/",
@@ -37,7 +37,7 @@
             "Attribute" : ["High Layout Design", "Effective UI"]
         },
         {
-            "Img" : "../img/epicGameStore.png",
+            "Img" : "/img/epicGameStore.png",
             "Title" : "FCLONE - Epic Games Store Clone Project 2023",
             "Description" : "Fclone is my personal project that focuses on cloning the appearance of certain web apps and then adjusting them to make them more distinct based on my preferences.",
             "Link" : "https://fadhyoung.github.io/epicGamesStore_clone/",

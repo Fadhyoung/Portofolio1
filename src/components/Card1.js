@@ -14,7 +14,7 @@ function Card1 ({img, title, description, link, technology, attribute}) {
                 group-hover:-translate-x-2 group-hover:-translate-y-2">
                     <img className="
                     h-full w-full absolute object-cover -z-20 object-top
-                    group-hover:hidden" src={img} alt="" />
+                    group-hover:hidden" src={`${process.env.PUBLIC_URL}${img}`} alt="" />
                     <div className="
                     h-3/4 w-full absolute -z-10 bg-gradient-to-t 
                     group-hover:bg-sky-500 group-hover:bg-none group-hover:h-full"></div>

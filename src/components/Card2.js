@@ -9,7 +9,7 @@ function Card2({content}) {
                     
                     {/** LEFT SIDE */}
                     <div className='w-full relative flex flex-col items-center'>
-                        <img class="object-cover h-full w-full" src={content.Img} alt="" />
+                        <img class="object-cover h-full w-full" src={`${process.env.PUBLIC_URL}${content.Img}`} alt="" />
                         <div className='absolute p-2 bg-sky-500 bottom-0 left-0 ' >THESIS PROJECT</div>
                     </div>
 

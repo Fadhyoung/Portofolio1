@@ -11,7 +11,7 @@ function LandingPage({onSectionClick}) {
     const SurroundCard = ({ Title, Glimpse, Icon }) => {
         return (
           <div className=" group
-          w-28 h-32 p-3 grid grid-rows-2 place-content-center place-items-center text-center border rounded border-sky-500 bg-white 
+          lg:w-28 md:w-28 xs:w-24 h-32 p-3 grid grid-rows-2 place-content-center place-items-center text-center border rounded border-sky-500 bg-white 
           hover:bg-sky-500 hover:text-white transition-transform duration-300 hover:scale-90">
             <div className='w-3/4 flex items-center justify-center text-sky-500 group-hover:text-white'>{Icon}</div>
             <div className='flex flex-col items-center'>
@@ -101,7 +101,7 @@ function LandingPage({onSectionClick}) {
                     />
                     <div className="bg-white w-36 h-48 p-3 z-30 drop-shadow border border-b-slate-300 rounded transition-transform duration-300 transform 
                     hover:scale-150 hover:drop-shadow-lg hover:border-amber-500">
-                        <img className="object-cover h-full w-full rounded-full" src={GetCoverPersonImage} alt="" />
+                        <img className="object-cover h-full w-full rounded-full" src={`${process.env.PUBLIC_URL}/img/fotoSaya.jpg`} alt="" />
                     </div>
                     <SurroundCard 
                     Title="ENGLISH" 

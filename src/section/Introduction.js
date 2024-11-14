@@ -37,7 +37,7 @@ function Introduction() {
     return (
       <>
         
-        <dv className="flex flex-col items-center gap-6">
+        <dv className=" w-full flex flex-col items-center gap-6">
         <AboutMe currentSlide={currentSlide} handlePrevious={handlePrevious} handleNext={handleNext} />
 
         <div className="lg:w-1/2 xs:w-5/6">
