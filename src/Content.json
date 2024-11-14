@@ -1,0 +1,82 @@
+{
+    "Projcet" : [
+        {
+            "Img" : "../img/RetrievalSystem.png",
+            "Title" : "Retrieval App",
+            "Description" : "Decelopment a web app that help in customer service feature that could help user to get information they need.",
+            "Link" : "https://github.com/Fadhyoung",
+            "Rate" : "A",
+            "Technology" : ["Python", "Js Native", "Flask", "T5"],
+            "Attribute" : ["Responsive web app", "Fluid web", "Backend Ai Program", "AI Selection"]
+        },
+        {
+            "Img" : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg",
+            "Title" : "DASA : Delta Sentiment Analysis",
+            "Description" : "DASA in an application that consist of four sentiment analysis ai model that could help for detecting sentiment form a text",
+            "Link" : "https://github.com/Fadhyoung",
+            "Rate" : "A",
+            "Technology" : ["Python", "ML", "Flask"],
+            "Attribute" : ["Sophisicated", "Multiple Choice", "Responsive", "95% Accuracy"]
+        },
+        {
+            "Img" : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg",
+            "Title" : "ASCENT : Aspiration Center",
+            "Description" : "ASCENT in an application user service website that store user aspiration",
+            "Link" : "https://github.com/Fadhyoung",
+            "Rate" : "A",
+            "Technology" : ["Java", "Springboot", "Javascript"],
+            "Attribute" : ["Responsive", "Strict Security", "API Adjustmen"]
+        },
+        {
+            "Img" : "../img/Pahe.png",
+            "Title" : "FCLONE - PAHE Clone Project 2023",
+            "Description" : "Fclone is my personal project that focuses on cloning the appearance of certain web apps and then adjusting them to make them more distinct based on my preferences.",
+            "Link" : "https://fadhyoung.github.io/pahe_clone/",
+            "Rate" : "B",
+            "Technology" : ["HTML", "CSS", "Javascript"],
+            "Attribute" : ["High Layout Design", "Effective UI"]
+        },
+        {
+            "Img" : "../img/epicGameStore.png",
+            "Title" : "FCLONE - Epic Games Store Clone Project 2023",
+            "Description" : "Fclone is my personal project that focuses on cloning the appearance of certain web apps and then adjusting them to make them more distinct based on my preferences.",
+            "Link" : "https://fadhyoung.github.io/epicGamesStore_clone/",
+            "Rate" : "B",
+            "Technology" : ["HTML", "CSS", "Javascript"],
+            "Attribute" : ["High Layout Design", "Effective UI"]
+        }
+    ],
+
+    "Banner" : [
+        {
+            "Title1" : "",
+            "Title2" : "",
+            "Title3" : "",
+            "Desc1" : "",
+            "Desc2" : "",
+            "Desc3" : "",
+            "button1" : "",
+            "button2" : ""
+        }
+    ],
+
+    "Education" : [
+        {
+            "Institution": "University of Jember",
+            "Major": "Information Technology"
+        },
+        {
+            "Institution" : "Metrodata Academy",
+            "Major": "Full Stack Developer"
+        },
+        {
+            "Institution": "Orbit Futura Academy",
+            "Major": "AI Development"
+        },
+        {
+            "Institution": "Daffodils English Course",
+            "Major": "English Speaking Course"
+        }
+    ]
+
+}

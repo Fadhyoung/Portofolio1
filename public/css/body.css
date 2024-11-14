@@ -1,0 +1,118 @@
+.body {
+    width: 100%;
+    display: flex; flex-direction: column;
+    justify-content: center; align-self: center;
+}
+
+.section2 span {
+    padding: 20px;
+    border: 2px solid black;
+    width: 50%;
+    background-color: white;
+}
+
+.body_section {
+    width: 90%;
+    margin: auto;
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.body-content1 {
+    width: 90%;
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.quote {
+    position: relative;
+    width: 25%;
+    text-align: start;
+    display: flex; flex-wrap: wrap;
+}
+
+.quote::after {
+    content: "";
+    display: block;
+    height: 100%;
+    clear: both;
+  }
+
+.background2 {
+    position: relative;
+    left: 0; top: 0;
+    flex-grow: 1;
+    width: 75%; height: 260px;  
+    border: 1px solid var(--secondary-color);
+    opacity: 0.3;
+    background-image:  linear-gradient(rgb(57, 113, 142) 2px, transparent 1px), linear-gradient(to right, rgb(57, 113, 142) 2px, #E7EEEC 1px);
+    background-size: 40px 40px;
+}
+
+.quote_text {
+    position: absolute;
+    left: 20px; top: 20px;
+    display: flex; flex-direction: column; gap: -50px;
+
+    font-family: BAHNSCHRIFT;
+    font-size: xxx-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quote_text > div:nth-child(1) {
+    color: var(primary-color);
+}
+
+.quote_text > div:nth-child(2) {
+    color: var(--secondary-color);
+}
+
+.quote_text > div:nth-child(3) {
+    color: var(--third-color);
+}
+
+.quote_text > div:nth-child(4) {
+    color: var(--black-color);
+}
+
+
+.numbering {
+    margin-top: 35px;
+    position: relative;
+    width: 8%;
+    aspect-ratio: 1 / 1;   
+    border: 2px solid black;
+    background-color: var(--third-color);
+    align-self: flex-start;
+}
+
+.numbering * {
+    position: absolute;
+    font-size: 5em;
+    font-weight: bolder;
+    top: -35px;
+    left: -5px;
+}
+
+.text_content {
+    width: 100%;
+    padding: 2%;
+    text-align: justify;
+    text-indent: 5%;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.text_content p {
+    margin-top: 60px;
+    color: var(--secondary-color);
+    font-family: MYRIADPRO-REGULAR;
+}
+
+.quote, .text_content {
+    display: grid;
+}

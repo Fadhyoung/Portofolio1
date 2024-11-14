@@ -1,3 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: calibre;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +20,67 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg-radial-pattern {
+  opacity: 1;
+  background-image: radial-gradient(#17275c 0.5px, #ffffff 0.5px);
+  background-size: 10px 10px;
+}
+
+.animate-fly1 {
+  animation:boxAnimation 2s ease-in infinite;
+}
+
+@keyframes boxAnimation {
+  0% { transform: translateY(0px) translateX(0px); }  /* Optional starting frame */
+  50% { transform: translateY(0px) translateX(30px); }  /* Optional ending frame */
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+
+/* src/index.css */
+@font-face {
+  font-family: 'calibre';
+  src: url("../public/Fonts/calibre/regular/calibre_regular.contenthash.96e3b1a24144c297ef23157e8fb82875fabbf07c.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* src/index.css */
+@font-face {
+  font-family: 'Calibre';
+  src: url("../public/Fonts/calibre/bold/calibre_bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url("../public/Fonts/calibre/semibold/calibre_semibold.woff2") format('woff2');
+  font-weight: 600;
+  font-style: semibold;
+}
+
+@keyframes fly {
+  0% {
+    top: 3px;
+    left: 0px;
+  }
+  25% {
+    top: 6px;
+    left: 3px;
+  }
+  50% {
+    top: 3px;
+    left: 6px;
+  }
+  75% {
+    top: 0px;
+    left: 3px;
+  }
+  100% {
+    top: 3px;
+    left: 0px;
+  }
+}
+
