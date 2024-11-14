@@ -1,0 +1,76 @@
+@import url(default.css);
+@import url(background.css);
+@import url(header.css);
+@import url(body.css);
+@import url(output.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+    Bahnschrift
+    Myriad Pro
+*/
+
+
+:root {
+    --primary-color: #173A59; /* Define your color variable */
+    --secondary-color: #39718E;
+    --third-color: #AF9476;
+    --black-color: #211E21;
+    --back-color: #E7EEEC  
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: BAHNSCHRIFT;
+    src: url(\Font\Bahnschrift-Font-Family\BAHNSCHRIFT.TTF);
+ }
+
+ @font-face {
+    font-family: 'SemiBoldCondensed';
+    src: url('/public/Font/Commerce\ Condensed\ S\ Si\ SemiBold\ Condensed.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MYRIADPRO-REGULAR';
+    src: url('/public/Font/MYRIADPRO-REGULAR.OTF') format('truetype');
+}
+
+body {
+    background-color: #E7EEEC;
+    font-family: Arial, Helvetica, sans-serif;;
+}
+
+ul {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Adjust the gap as needed */
+    padding: 0; /* Optional: remove default padding */
+    list-style-type: none; /* Optional: remove bullet points */
+}
+
+li {
+    list-style-type: none;
+    letter-spacing: 2px
+}
+
+li::marker {
+    color: var(--third-color) ;
+}
+
+.mainBody {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #211E21;
+
+    display: flex; flex-direction: column;
+}

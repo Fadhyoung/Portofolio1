@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Portofolio1/static/css/main.1754fc9d.css",
+    "main.js": "/Portofolio1/static/js/main.21d333ea.js",
+    "static/js/453.ed3810f9.chunk.js": "/Portofolio1/static/js/453.ed3810f9.chunk.js",
+    "static/media/fotoSaya.jpg": "/Portofolio1/static/media/fotoSaya.1c73f2d6f25358368b54.jpg",
+    "static/media/calibre_bold.woff2": "/Portofolio1/static/media/calibre_bold.00f0959b623a7d9de033.woff2",
+    "static/media/calibre_semibold.woff2": "/Portofolio1/static/media/calibre_semibold.36e35ba49d5ae0f003d5.woff2",
+    "static/media/calibre_regular.contenthash.fabbf07c.woff2": "/Portofolio1/static/media/calibre_regular.contenthash.96e3b1a24144c297ef23157e8fb82875fabbf07c.870139f4d7e4186bdf55.woff2",
+    "static/media/FullLogoFadhli.png": "/Portofolio1/static/media/FullLogoFadhli.b0971526c5b86b121e41.png",
+    "static/media/flowbite--react-solid.svg": "/Portofolio1/static/media/flowbite--react-solid.81537196f4c3241802f38da66ae91632.svg",
+    "static/media/lineicons--java.svg": "/Portofolio1/static/media/lineicons--java.817a6a47928ecf6e1cc3489df57a037a.svg",
+    "static/media/logo-python.svg": "/Portofolio1/static/media/logo-python.5b929ed67c6543824987a15ca321acc9.svg",
+    "static/media/game-icons--dart.svg": "/Portofolio1/static/media/game-icons--dart.ca12c043129940379751df62db8fe53b.svg",
+    "static/media/ri--bootstrap-fill.svg": "/Portofolio1/static/media/ri--bootstrap-fill.03b0d7e923a9e6f204a1ca94a7b45074.svg",
+    "static/media/mage--illustrator.svg": "/Portofolio1/static/media/mage--illustrator.68e825641d26f8d88d995c58a8239e0d.svg",
+    "static/media/spring-boot.svg": "/Portofolio1/static/media/spring-boot.ec2dd8b333f944834e37fb9a39b9b0cf.svg",
+    "index.html": "/Portofolio1/index.html",
+    "static/media/javascript-js-square.svg": "/Portofolio1/static/media/javascript-js-square.54d1ff0228e760534618244616ec9d3d.svg",
+    "static/media/mdi--microsoft-office.svg": "/Portofolio1/static/media/mdi--microsoft-office.6d001652175132f3ee4e4b8ae831dca2.svg",
+    "static/media/hugeicons--adobe-after-effect.svg": "/Portofolio1/static/media/hugeicons--adobe-after-effect.4445ff7a88c8f386f10dc10943548be9.svg",
+    "static/media/carbon--machine-learning.svg": "/Portofolio1/static/media/carbon--machine-learning.94cabfc3b4c844904e94e5aeb17e6b08.svg",
+    "static/media/mdi--tailwind.svg": "/Portofolio1/static/media/mdi--tailwind.d4f4ae2fb940bcb141949408eb9bfd11.svg",
+    "static/media/css3.svg": "/Portofolio1/static/media/css3.297582b2ef2a8d5b3bea5f358b0e1979.svg",
+    "static/media/html-5-logo.svg": "/Portofolio1/static/media/html-5-logo.0520c57181e2ed9214b151582270b7e6.svg",
+    "static/media/material-symbols--flutter.svg": "/Portofolio1/static/media/material-symbols--flutter.3c02568ccab0875fe644eaeadab1f357.svg",
+    "main.1754fc9d.css.map": "/Portofolio1/static/css/main.1754fc9d.css.map",
+    "main.21d333ea.js.map": "/Portofolio1/static/js/main.21d333ea.js.map",
+    "453.ed3810f9.chunk.js.map": "/Portofolio1/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1754fc9d.css",
+    "static/js/main.21d333ea.js"
+  ]
+}
