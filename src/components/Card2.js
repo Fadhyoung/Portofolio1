@@ -3,18 +3,18 @@ function Card2({content}) {
     return (
 
         <>
-            <div className="m-auto w-full sm:w-1/4 h-fit flex flex-row grow justify-center items-stretch drop-shadow-xl">
-                <div className="w-full h-full grid lg:grid-cols-2 border box-border
-                sm:grid-cols-1 border-sky-500">
+            <div className="m-auto w-full sm:w-1/4 h-full flex flex-row grow justify-center items-stretch drop-shadow-xl">
+                <div className="w-full h-auto grid lg:grid-cols-4 border box-border
+                xs:grid-cols-1 border-sky-500" style={{ gridAutoRows: 'min-content' }}>
                     
                     {/** LEFT SIDE */}
-                    <div className='w-full relative flex flex-col items-center'>
-                        <img class="object-cover h-full w-full" src={`${process.env.PUBLIC_URL}${content.Img}`} alt="" />
+                    <div className='w-full lg:h-full xs:h-60 col-span-1 relative flex flex-col items-center'>
+                        <img class="object-cover object-center h-full w-full" src={`${process.env.PUBLIC_URL}${content.Img}`} alt="" />
                         <div className='absolute p-2 bg-sky-500 bottom-0 left-0 ' >THESIS PROJECT</div>
                     </div>
 
                     {/** RIGHT SIDE */}
-                    <div className='w-full grid grid-rows-[auto] place-content-stretch border-l border-sky-500'>
+                    <div className='w-full h-full col-span-3 grid grid-rows-[auto] place-content-stretch border-l border-sky-500'>
 
                         {/** Section-1 */}
                         <div className='w-full p-4 text-justify text-lg font-bold bg-white'>

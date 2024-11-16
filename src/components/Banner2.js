@@ -4,7 +4,7 @@ function Banner2() {
 
     return (
         <>
-            <div className="w-3/5 m-auto flex flex-col gap-4 justify-center items-center
+            <div className="w-full m-auto flex flex-col gap-4 justify-center items-center
                             
             ">
                 <h1 className="font-black text-2xl text-transparent text-center

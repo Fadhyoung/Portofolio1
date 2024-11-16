@@ -7,13 +7,13 @@ import Content from "../Content.json"
 
 function PriorCard() {
 
-  const Projcet = Content.Projcet.filter((data) => data.Rate === 'A');
+  const Projcet = Content.Projcet.filter((data) => data.Rate === 'A' && data.Category == "Web");
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(1);
-  const [fade, setFade] = useState(true); 
+  const [transition, setTransition] = useState(false);
 
   useEffect(() => {
     // Simulate data loading as if it were fetched
@@ -27,13 +27,13 @@ function PriorCard() {
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
   const handlePagination = (pageNumber) => {
-    setFade(false); // Trigger fade out
+    setTransition(true); // Trigger fade out
 
     // Wait for the fade out to finish before changing page
     setTimeout(() => {
         setCurrentPage(pageNumber); // Update the current page
-        setFade(true); // Trigger fade in
-    }, 500); // Match this time to your CSS transition duration
+        setTransition(false); // Trigger fade in
+    }, 400); // Match this time to your CSS transition duration
 };
 
 
@@ -53,13 +53,17 @@ function PriorCard() {
           title = {"Best Project"}
         />
 
-        <div className='w-full h-full flex flex-nowrap gap-20 snap-x snap-mandatory'>
+        <div className='w-full h-full flex flex-nowrap gap-20 snap-x snap-mandatory'
+        style={{
+          opacity: transition ? 0 : 1,
+          transition: 'opacity  0.4s linear', // Optional: adds smooth transition effect
+      }}>
           {
             currentPosts
             .map((data, index) => (
               <div 
               key={`${currentPage}-${data.id}`}
-              className={`w-full flex-shrink-0 snap-center  box-border ${fade ? 'opacity-100 duration-300' : 'opacity-0'}`}
+              className={`w-full flex-shrink-0 snap-center  box-border`}
               >
                 <Card2 
                 content= {data}

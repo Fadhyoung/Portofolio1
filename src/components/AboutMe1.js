@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import GetCoverPersonImage from "../img/fotoSaya.jpg";
 import Icon from "../icons/icons";
 import { icons } from "../icons/icons";
@@ -8,7 +7,6 @@ import Content from "../Content.json"
 const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
 
     const skills = Object.keys(icons);
-    console.log(skills)
 
       const slides = [
         {

@@ -20,11 +20,11 @@ function Navbar1({onSectionClick}) {
 
     return (
         <>
-            <nav className="flex flex-row justify-between items-center w-full px-20 py-3 top-0 z-50 bg-white">
+            <nav className="flex flex-row lg:justify-between xs:justify-center items-center w-full px-20 py-3 top-0 z-50 bg-white">
                 <div className="w-20 m-2 box-border">
                     <img src={GetLogoImg} alt="Logo" />
                 </div>
-                <div className="flex flex-row justify-center items-center gap-9 font-medium text-sm">
+                <div className="lg:flex xs:hidden flex-row justify-center items-center gap-9 font-medium text-sm">
                     <div className='hover:drop-shadow'><button onClick={() => onSectionClick('priorCard')}>Best Project</button></div>
                     <div className='hover:drop-shadow'><button onClick={() => onSectionClick('allProjects')}>All Project</button></div>
                     {/** 

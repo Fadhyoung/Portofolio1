@@ -12,6 +12,8 @@ import ContentGallery from './section/ContentGallery';
 import Banner2 from './components/Banner2';
 import Footer from './section/Footer';
 
+import Content from "./Content.json"
+
 function App() {
 
   // State to control the visibility and opacity of the navbar
@@ -87,24 +89,26 @@ function App() {
 
         <div className='my-20 ' ref={sectionRefs.introduction}><Introduction /></div>
         
-        <div className='m-auto lg:w-3/4 xs:w-5/6 ' ref={sectionRefs.priorCard}><PriorCard /></div>
+        <div className='m-auto lg:w-3/4 xs:w-11/12 ' ref={sectionRefs.priorCard}><PriorCard /></div>
         
-        <div>
+        <div className='w-full my-10'>
           <Banner1 
             FirstTitle={"What do you think about my portofolio?"}
-            SecondTitle={"Is it good?"}
+            SecondTitle={"Roll down please"}
             Desc={"I know there's some of unfinished thing. but everything is still in development and will be always developed. So don't hasitate to hire me :v"}
-            ButtonT={"If You Still Interested, Scroll Down"}
+            ButtonT={"Scroll Down"}
             onSectionClick={scrollToSection}
           />
         </div>
         
 
-        <div className='w-full' ref={sectionRefs.allProjects}><ContentGallery  /></div>
+        <div className='w-full' ref={sectionRefs.allProjects}><ContentGallery data={Content.Projcet} Category={"Web"} /></div>
 
-        <div><Banner2 /></div>
+        <div className='my-8 mx-auto lg:w-3/5 xs:w-full lg:p-0 xs:p-2 '><Banner2 /></div>
+
+        <div className='w-full'><ContentGallery data={Content.Projcet} Category={"UIUX"} /></div>
         
-        <div>
+        <div className='lg:w-3/4 xs:w-11/12 m-auto'>
           <Banner3 
             FirstTitle={"Are you pleased?"}
             SecondTitle={"Check my resume for more detail about me"}
