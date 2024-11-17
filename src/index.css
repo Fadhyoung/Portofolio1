@@ -31,6 +31,29 @@ code {
   animation:boxAnimation 2s ease-in infinite;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width:4px; height:4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width:1px; height:1px;
+  background: rgb(23 37 84);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  width:1p; height:1px;
+  background: rgb(245 158 11);
+}
+
 @keyframes boxAnimation {
   0% { transform: translateY(0px) translateX(0px); }  /* Optional starting frame */
   50% { transform: translateY(0px) translateX(30px); }  /* Optional ending frame */

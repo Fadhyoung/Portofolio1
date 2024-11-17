@@ -123,16 +123,20 @@ function LandingPage({onSectionClick}) {
                     
                 </div>
             </div>
+
+                {/** SCROLL DOWN */}
+                <button className='w-40 p-3 absolute lg:-bottom-10 lg:right-10 xs:m-auto sm:-bottom-20 xs:-bottom-20 flex gap-3 items-center animate-bounce border rounded-full bg-sky-500 '
+                        onClick={() => onSectionClick('introduction')}
+                >
+                    <svg className="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <h1 >Scroll Down</h1>
+                </button>
+
             </div>
 
-            <button className='w-40 p-3 absolute lg:-bottom-10 lg:right-10 xs:m-auto xs:-bottom-20 flex gap-3 items-center animate-bounce border rounded-full bg-sky-500 '
-                    onClick={() => onSectionClick('introduction')}
-            >
-                <svg className="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
-                <h1 >Scroll Down</h1>
-            </button>
+            
 
     </header>
     );

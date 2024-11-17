@@ -17,7 +17,7 @@ function Banner3({FirstTitle, SecondTitle, Desc, ButtonT}) {
             \children
         </Modal>
         
-            <div className="w-full xs:w-3/4 m-auto items-center flex flex-col border rounded-md border-amber-500">
+            <div className="w-full xs:w-3/4 lg:px-0 xs:px-10 m-auto items-center flex flex-col border rounded-md border-amber-500">
                 <section className="py-10 text-blue-950">
                     <div className="mx-auto max-w-screen-xl">
                         <div className="mx-auto h-auto max-w-3xl text-center">

@@ -20,11 +20,11 @@ function Card1 ({img, title, description, link, technology, attribute}) {
                               
                     <div className="p-4 !pt-5 w-full lg:h-full min-h-fit self-stretch transition-opacity group-hover:absolute group-hover:hidden">
                        {/** TECH LABEL */} 
-                       <div className="w-full flex flex-row flex-nowrap lg:overflow-x-hidden xs:overflow-x-scroll justify-start items-center gap-3">
+                       <div className="w-full flex flex-row flex-nowrap md:overflow-x-hidden xs:overflow-x-scroll justify-start items-center gap-3">
                             {technology.map((tech, index) => (
                                 <div
                                     key={index} // Add a key here for each item
-                                    className="px-3 py-1 rounded-full bg-blue-950 text-white lg:text-xs "
+                                    className="px-3 py-1 text-nowrap rounded-full bg-blue-950 text-white lg:text-xs "
                                 >
                                     {tech}
                                 </div>
