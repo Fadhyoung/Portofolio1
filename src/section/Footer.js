@@ -14,18 +14,18 @@ function Footer () {
 
                 <a
                     href="#"
-                    className="mt-8 inline-block rounded-full border border-indigo-600 px-12 py-3 text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+                    className="mt-8 inline-block rounded-full border border-sky-500 px-12 py-3 text-sm font-medium text-sky-500 hover:bg-sky-500 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
                 >
                     CONTECT ME
                 </a>
                 </div>
 
                 <div
-                className="mt-16 border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24"
+                className="mt-16 border-t border-amber-500 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24"
                 >
                 <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
                     <li>
-                    <a href="#" className="text-white transition hover:opacity-75"> 2024 @ Fadhli Nur Himawan</a>
+                    <a href="#" className="text-amber-500 transition hover:opacity-75"> 2024 @ Fadhli Nur Himawan</a>
                     </li>
                 </ul>
 
@@ -36,7 +36,7 @@ function Footer () {
                         href="#"
                         rel="noreferrer"
                         target="_blank"
-                        className="text-white transition hover:opacity-75"
+                        className="text-amber-500 transition hover:opacity-75"
                     >
                         <span className="sr-only">Instagram</span>
 
@@ -55,7 +55,7 @@ function Footer () {
                         href="#"
                         rel="noreferrer"
                         target="_blank"
-                        className="text-white transition hover:opacity-75"
+                        className="text-amber-500 transition hover:opacity-75"
                     >
                         <span className="sr-only">Twitter</span>
 
@@ -72,7 +72,7 @@ function Footer () {
                         href="#"
                         rel="noreferrer"
                         target="_blank"
-                        className="text-white transition hover:opacity-75"
+                        className="text-amber-500 transition hover:opacity-75"
                     >
                         <span className="sr-only">GitHub</span>
 

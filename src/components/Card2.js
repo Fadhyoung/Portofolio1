@@ -3,7 +3,7 @@ function Card2({content}) {
     return (
 
         <>
-            <div className="m-auto w-full sm:w-1/4 h-full flex flex-row grow justify-center items-stretch drop-shadow-xl">
+            <div className="m-auto w-full sm:w-1/4 h-full flex flex-row grow justify-center items-stretch">
                 <div className="w-full h-auto grid lg:grid-cols-4 border box-border
                 xs:grid-cols-1 border-sky-500" style={{ gridAutoRows: 'min-content' }}>
                     

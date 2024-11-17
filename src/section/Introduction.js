@@ -40,7 +40,7 @@ function Introduction() {
         <dv className=" w-full flex flex-col items-center gap-6">
         <AboutMe currentSlide={currentSlide} handlePrevious={handlePrevious} handleNext={handleNext} />
 
-        <div className="lg:w-1/2 xs:w-5/6">
+        <div className="lg:w-3/4 xs:w-5/6">
           <Step1 progress={Progress} currentSlide={currentSlide} goToSlide={goToSlide}  />
         </div>      
         </dv>    

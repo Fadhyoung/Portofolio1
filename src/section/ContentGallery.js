@@ -65,7 +65,7 @@ function ContentGallery({data, Category}) {
                 {/** CONTENT */}
                 <div className="lg:w-3/4 xs:w-11/12 m-auto relative flex flex-row flex-nowrap overflow-hidden gap-6 justify-start">
                     
-                    <div className="w-full m-auto flex flex-row flex-nowrap gap-6 justify-start lg:overflow-hidden xs:overflow-scroll snap-x snap-mandatory"
+                    <div className={`w-full m-auto flex flex-row flex-nowrap gap-6 ${currentPosts.length >= postsPerPage ? "justify-between" : "justify-start" }  lg:overflow-hidden xs:overflow-scroll snap-x snap-mandatory`}
                     style={{
                         transform: transition,
                         transition: 'transform 0.4s ease-in-out', // Optional: adds smooth transition effect

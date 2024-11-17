@@ -50,7 +50,7 @@ function PriorCard() {
 
       <div className='max-auto m-auto flex flex-col gap-5'>
         <Divider1 
-          title = {"Best Project"}
+          title = {"Best Project"} length={posts.length} postsPerPage={postsPerPage} handlePagination={handlePagination} currentPage={currentPage}
         />
 
         <div className='w-full h-full flex flex-nowrap gap-20 snap-x snap-mandatory'
@@ -74,8 +74,11 @@ function PriorCard() {
             )
           }
         </div>
-
+        
+        <div className='lg:hidden xs:block'>
         <Pagination1 length={posts.length} postsPerPage={postsPerPage} handlePagination={handlePagination} currentPage={currentPage} />
+        </div>
+        
       </div>
 
     </>

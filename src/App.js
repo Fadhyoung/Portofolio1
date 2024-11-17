@@ -73,9 +73,9 @@ function App() {
   return (
     <>
       
-      <div className='lg:w-full xs:w-fit max-w-[2024px] xs:h-screen m-auto grid grid-cols-1 gap-10 font-calibre'>
+      <div className='lg:w-full xs:w-fit max-w-[2024px] m-auto grid grid-cols-1 gap-10 font-calibre'>
 
-        <div><LandingPage onSectionClick={scrollToSection}/></div>
+        <div className=''><LandingPage onSectionClick={scrollToSection}/></div>
         
         <br></br>
         
@@ -87,7 +87,7 @@ function App() {
           <Navbar1 onSectionClick={scrollToSection} /> {/* Pass the scroll function to Navbar */}
         </div>
 
-        <div className='my-20 ' ref={sectionRefs.introduction}><Introduction /></div>
+        <div className='my-5' ref={sectionRefs.introduction}><Introduction /></div>
         
         <div className='m-auto lg:w-3/4 xs:w-11/12 ' ref={sectionRefs.priorCard}><PriorCard /></div>
         
@@ -104,7 +104,7 @@ function App() {
 
         <div className='w-full' ref={sectionRefs.allProjects}><ContentGallery data={Content.Projcet} Category={"Web"} /></div>
 
-        <div className='my-8 mx-auto lg:w-3/5 xs:w-full lg:p-0 xs:p-2 '><Banner2 /></div>
+        <div className='my-8 mx-auto lg:w-3/4 xs:w-full lg:p-0 xs:p-2'><Banner2 /></div>
 
         <div className='w-full'><ContentGallery data={Content.Projcet} Category={"UIUX"} /></div>
         
