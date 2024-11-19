@@ -1,5 +1,4 @@
-function Card2({content}) {
-
+export const Card2 = ({content}) => {
     return (
 
         <>
@@ -84,4 +83,66 @@ function Card2({content}) {
     
 }
 
-export default Card2
+export const Card3 = ({content}) => {
+
+    const RADIAL_BG = {
+        background: 'radial-gradient(rgb(14 165 233), rgb(23 37 84))'
+    }
+
+    const DOPE_SHADOW = {
+        filter: 'drop-shadow(2px 2px 5px rgb(0 0 0 / 1))'
+    }
+
+    return (
+        <>
+            {/** LEFT BAR */}
+            <div className="w-full lg:h-full xs:h-full relative flex flex-col items-end rounded-lg bg-white transition-opacity" style={DOPE_SHADOW}>
+                {/** BACKGRUND */}
+                <div className="w-full h-full absolute -z-10 rounded-lg">
+                    <div className="w-full h-full absolute rounded-md bg-gradient-to-t from-blue-950 to-transparent"></div>
+                    <div className="w-full h-full absolute rounded-lg opacity-50 bg-gradient-to-t from-blue-950 to-transparent"></div>
+                    <img className="object-cover object-top self-center rounded-lg w-full h-full" src={`${process.env.PUBLIC_URL}${content.home_img}`} />
+                </div>
+                {/** FLOATING DESC */}
+                <div className="w-full lg:h-1/2 xs:h-4/6 px-3 absolute flex-shrink-0 bottom-0 grid grid-cols-4 place-content-stretch items-stretch">
+                    {/** IMG SIDE */}
+                    <div className="w-full h-56 p-5 xl:flex xs:hidden justify-center">
+                        <img className="object-cover object-center rounded-lg w-11/12 h-full" src={`${process.env.PUBLIC_URL}${content.cover_img}`} />
+                    </div>
+                    {/** DESC SIDE */}
+                    <div className="py-5 xl:col-span-3 xs:col-span-4 flex flex-col justify-between lg:gap-2 xs:gap-0">
+                        <div className="flex items-start">
+                            <h1 className="lg:text-3xl xs:text-lg font-bold text-white drop-shadow-lg">{content.Title}</h1>
+                            {/** FLOATING LINK */}
+                            <a className="ml-4 text-white hover:scale-110 transition-transform hover:cursor-pointer" href={content.Link} target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                </svg>
+                            </a>
+                        </div>
+                        <p className="lg:w-3/4 xs:w-full lg:text-sm xs:text-2xs drop-shadow-md text-white">{content.Description}</p>
+                        <div className="flex lg:gap-3 xs:gap-1">
+                            {content.Technology.map((tech, index) => (
+                                <div
+                                    key={index} // Add a key here for each item
+                                    className="lg:px-3 lg:py-1 xs:px-2 text-nowrap rounded-sm bg-amber-500 text-white lg:text-xs xs:text-2xs"
+                                >
+                                    {tech}
+                                </div>
+                            ))}    
+                        </div>
+                        <div className="flex flex-wrap lg:gap-3 xs:gap-1">
+                            {   content.Attribute.map((att, index) => (
+                                <div className='py-1 px-2 items-center lg:text-xs xs:text-2xs text-white border rounded-sm border-amber-500'>                                        
+                                    <p>{att}</p>
+                                </div>
+                            ))} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default Card2;

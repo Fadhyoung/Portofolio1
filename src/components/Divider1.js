@@ -12,18 +12,6 @@ export const Divider1 = ({title, postsPerPage, length, handlePagination, current
                 from-sky-500 to-amber-500 bg-clip-text border rounded-md border-amber-500 text-transparent
                 ">Fn# Web Project</span>
                 <span className="h-px w-full bg-amber-500"></span> {/** LINE */}
-                {
-                    paginationNumber.map((data) => (
-                        <>
-                            <span className="h-px w-5 bg-amber-500"></span>
-                            <button  key={data} onClick={() => handlePagination(data)} className={`${currentPage === data ? 'bg-amber-500 text-white' : 'bg-white'} text-black border border-amber-500 rounded-md`}>
-                                <div className="py-1 px-5 drop-shadow-sm ">
-                                {data}
-                                </div>
-                            </button>
-                        </>                        
-                    ))
-                }
             </div>
         </>
     )

@@ -87,7 +87,7 @@ function App() {
           <Navbar1 onSectionClick={scrollToSection} /> {/* Pass the scroll function to Navbar */}
         </div>
 
-        <div className='my-5' ref={sectionRefs.introduction}><Introduction /></div>
+        <div className='' ref={sectionRefs.introduction}><Introduction /></div>
         
         <div className='m-auto lg:w-3/4 xs:w-11/12 ' ref={sectionRefs.priorCard}><PriorCard /></div>
         
@@ -104,7 +104,7 @@ function App() {
 
         <div className='w-full' ref={sectionRefs.allProjects}><ContentGallery data={Content.Projcet} Category={"Web"} /></div>
 
-        <div className='my-8 mx-auto lg:w-3/4 xs:w-full lg:p-0 xs:p-2'><Banner2 /></div>
+        <div className='mx-auto lg:w-3/4 xs:w-full lg:p-0 xs:p-2'><Banner2 /></div>
 
         <div className='w-full'><ContentGallery data={Content.Projcet} Category={"UIUX"} /></div>
         

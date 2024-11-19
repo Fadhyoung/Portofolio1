@@ -22,6 +22,9 @@ module.exports = {
       fontFamily: {
         calibre: ['Calibre', 'sans-serif'],
       },
+      fontSize: {
+        '2xs': ['0.65rem']
+      }
     },
   },
   plugins: [],

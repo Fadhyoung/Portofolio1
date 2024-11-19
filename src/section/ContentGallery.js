@@ -6,12 +6,8 @@ import Divider1, { Divider2 } from '../components/Divider1';
 
 function ContentGallery({data, Category}) {
 
-    console.log(data)
-
     const WebProjcet = data.filter((data) => data.Category === Category);
     const WebProjcetLength = WebProjcet.length
-
-    console.log(WebProjcetLength)
 
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -36,7 +32,6 @@ function ContentGallery({data, Category}) {
         } else if (status === 'next') {
             setTransition('translateX(100%)');
         }       
-        console.log(status)
         setTimeout(() => {
             setTransition('translateX(100%)')
             setCurrentPage(pageNumber);

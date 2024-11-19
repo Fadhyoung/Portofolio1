@@ -1,4 +1,3 @@
-import GetCoverPersonImage from "../img/fotoSaya.jpg";
 import Icon from "../icons/icons";
 import { icons } from "../icons/icons";
 
@@ -14,18 +13,48 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
           content: (
             <div className="w-full h-full lg:flex-shrink-0 grid lg:grid-cols-3 lg:grid-rows-none lg:place-content-center gap-6
             xs:w-full xs:grid-cols-none xs:flex xs:flex-col">
-                <div className="h-full p-4 flex flex-col text-right lg:items-end lg:justify-between xs:items-center">
-                    <div className="w-auto flex flex-col lg:items-end xs:items-center"><h1 className="font-bold text-2xl text-sky-500">FADHLI NUR HIMAWAN</h1>
-                    <p className="bg-blue-950 py-1 px-3 rounded text-sky-50">You can call me <span className="text-amber-500">Hima</span></p></div>
-                    <div className="flex flex-col xs:items-center lg:items-end"><h1 className="font-bold text-xl text-amber-500">22 years old</h1><p>Wonogiri, 11 March 2002</p></div>
-                </div>
-                <div className="h-72 w-full">
-                    <img className="object-cover h-full w-full rounded-md" src={GetCoverPersonImage} alt="" />
-                </div>
-                <div className="flex flex-col text-left items-start justify-end">
-                    <p className="lg:p-0 xs:p-3 font-medium text-base text-justify indent-10">
+                {/** LEFT CONTENT */}
+                <div className="h-72 flex flex-col text-right lg:items-end lg:justify-between xs:items-center">
+                    <div className="w-auto flex flex-col gap-2 lg:items-end xs:items-center">
+                        <h1 className="font-bold text-2xl text-sky-500">FADHLI NUR HIMAWAN</h1>
+                        <p className="bg-blue-950 py-1 px-3 rounded text-sky-50">You can call me <span className="text-amber-500">Hima</span></p>
+                        <div className="flex gap-2 text-lg xs:items-center lg:items-end"><h1 className="font-bold text-amber-500">22 years old </h1><span>Wonogiri, 11 March 2002</span></div>
+                    </div>
+                    <p className="lg:p-0 xs:p-3 font-medium text-sm text-justify indent-10">
                     Passionate about application and AI development. Skilled in developing major web applications, with a focus on creating interactive and visually appealing front-end pages, as well as handling computational back-end processes. A day-to-day English consumer, continuously working to stay updated with global news and trends. A keen enthusiasm for artificial intelligence.
                     </p>
+                </div>
+                {/** CENTER CONTENT */}
+                <div className="h-72 w-full lg:p-0 xs:p-2">
+                    <img className="object-cover h-full w-full rounded-md" src={`${process.env.PUBLIC_URL}/img/fotoSaya.jpg`} alt="" />
+                </div>
+                {/** RIGHT CONTENT */}
+                <div className="h-72 lg:p-0 xs:p-2 grid grid-rows-2 gap-2 text-left items-center justify-items-stretch">
+                    {/** LINK TO SOCIAL MEDIA */}
+                    {/** LABEL 1 */}
+                    <div className="w-full p-1 h-full cursor-pointer border-2 rounded-lg bg-blue-950 border-amber-500
+                        transition-all hover:scale-95 
+                    " >
+                        <div className="w-full h-full grid grid-cols-3">
+                            <div className="ml-4 self-center text-4xl font-semibold z-10 text-amber-500">LINKEDIN</div>
+                            <div className="col-span-2 relative rounded-md overflow-hidden">
+                                <div className="w-full h-full absolute bg-gradient-to-r from-blue-950 to-sky-500"></div>
+                                <img className="object-cover h-full w-full" src={`${process.env.PUBLIC_URL}/img/linkedin.png`} alt="" />
+                            </div>
+                        </div>                        
+                    </div>
+                    {/** LABEL 2 */}
+                    <div className="w-full p-1 h-full cursor-pointer border-2 rounded-lg bg-blue-950 border-amber-500
+                        transition-all hover:scale-95
+                    " >
+                        <div className="w-full h-full grid grid-cols-3">
+                            <div className="ml-4 self-center text-4xl font-semibold z-10 text-amber-500">LINKEDIN</div>
+                            <div className="col-span-2 relative rounded-md overflow-hidden">
+                                <div className="w-full h-full absolute bg-gradient-to-r from-blue-950 to-sky-500"></div>
+                                <img className="object-cover h-full w-full" src={`${process.env.PUBLIC_URL}/img/linkedin.png`} alt="" />
+                            </div>
+                        </div>                        
+                    </div>
                 </div>
             </div>
           )
@@ -70,7 +99,7 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
                     ABOUT ME
                 </div>
 
-                <div className="w-full p-4 grid grid-cols-8 justify-items-center border border-sky-500">
+                <div className="w-full py-4 grid grid-cols-8 justify-items-center border border-sky-500">
 
                     {/** Prev Button */}
                     <div className="flex justify-center items-center xs:hidden">
