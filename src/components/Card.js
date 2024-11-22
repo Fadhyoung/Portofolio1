@@ -1,3 +1,4 @@
+
 export const Card2 = ({content}) => {
     return (
 

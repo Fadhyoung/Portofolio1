@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Content from "../Content.json";
 
+import { ThemeContext } from "../Theme";
+
+
 function Card1 ({img, title, description, link, technology, attribute}) {
+
+    const { theme } = useContext(ThemeContext)
 
 
     return (
@@ -9,9 +14,9 @@ function Card1 ({img, title, description, link, technology, attribute}) {
             <a href={link} target="_blank" className="w-full xs:h-96 lg:h-96 group relative block overflow-hidden">
                 <span className="absolute inset-0 border-2 border-dashed border-blue-950"></span>
 
-                <div className="h-full w-full grid grid-rows-3 transform items-start border
-                border-sky-500 bg-white transition-transform 
-                group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:bg-sky-500">
+                <div className={`h-full w-full grid grid-rows-3 transform items-start border
+                border-sky-500 ${theme} transition-transform 
+                group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:bg-sky-500`}>
                     <div className="w-full h-full row-span-2">
                         <img className="
                         h-full w-full object-cover -z-20 object-center
@@ -24,7 +29,7 @@ function Card1 ({img, title, description, link, technology, attribute}) {
                             {technology.map((tech, index) => (
                                 <div
                                     key={index} // Add a key here for each item
-                                    className="px-3 py-1 text-nowrap rounded-full bg-blue-950 text-white lg:text-xs "
+                                    className={`px-3 py-1 text-nowrap rounded-full lg:text-xs ${theme === "dark-theme" ? "bg-amber-500" : "bg-blue-950 text-white" }`}
                                 >
                                     {tech}
                                 </div>
@@ -38,13 +43,13 @@ function Card1 ({img, title, description, link, technology, attribute}) {
                     <div
                     className="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 group-hover:self-end sm:p-6 lg:p-8"
                     >
-                    <h3 className="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h3>
+                    <h3 className="mt-4 text-xl font-medium sm:text-2xl">{title}</h3>
 
                     <p className="mt-4 text-sm sm:text-base">
                         {description}
                     </p>
 
-                    <p className="mt-8 font-bold">Read more</p>
+                    <div  className="mt-8 font-bold"><a href={link} >Visit the site</a></div>
                     </div>
                 </div>
                 </a>

@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './tailwind.css';
 import '../output.css';
 import Modal from '../components/Modal';
 import GetCoverPersonImage from "../img/fotoSaya.jpg";
 
+import { ThemeContext } from '../Theme';
+
 function LandingPage({onSectionClick}) {
 
+    const{ theme, toggleTheme } = useContext(ThemeContext)
     const[isOpen, setIsOpen] = useState(false)
 
     const SurroundCard = ({ Title, Glimpse, Icon }) => {
         return (
-          <div className=" group
-          lg:w-28 md:w-28 xs:w-24 h-32 p-3 grid grid-rows-2 place-content-center place-items-center text-center border rounded border-sky-500 bg-white 
-          hover:bg-sky-500 hover:text-white transition-transform duration-300 hover:scale-90">
+          <div className={` group
+          lg:w-28 md:w-28 xs:w-24 h-32 p-3 grid grid-rows-2 place-content-center place-items-center text-center border rounded scard-${theme}
+          hover:bg-sky-500 hover:text-white transition-transform duration-300 hover:scale-90`}>
             <div className='w-3/4 flex items-center justify-center text-sky-500 group-hover:text-white'>{Icon}</div>
             <div className='flex flex-col items-center'>
-                <h4 className='flex items-center justify-cente font-bold text-blue-950 group-hover:text-amber-500'>{Title}</h4>
+                <h4 className='flex items-center justify-cente font-bold amber-text-${theme} group-hover:text-amber-500'>{Title}</h4>
                 <p className='text-xs font-thin'>{Glimpse}</p>
             </div>
           </div>
@@ -24,41 +27,41 @@ function LandingPage({onSectionClick}) {
 
     return (
         
-    <header className="relative w-full h-full flex flex-col gap-12 justify-start items-center bg-radial-pattern"
+    <header className={`relative w-full h-full flex flex-col gap-12 justify-start items-center bg-radial-pattern-${theme}`}
     >
 
-        <div className='w-full h-full absolute top-0 right-0 bg-gradient-to-t from-white via-transparent to-white'></div>
+        <div className={`w-full h-full absolute top-0 right-0 bg-gradient-${theme}`}></div>
 
         <Modal open={isOpen} close={() => {setIsOpen(false);}}>
             \children
         </Modal>
 
-        {/** FLYING INFORMATION */}
-        <div className='lg:block group hover:w-72 w-auto p-3 absolute top-20 left-20 z-50 rounded drop-shadow animate-fly1 cursor-pointer bg-white
-                        xs:hidden'>
+        {/** FLYING INFORMATION EXPANDING */}
+        <div className={`lg:block group hover:w-72 w-auto p-3 absolute top-20 left-20 z-50 rounded drop-shadow animate-fly1 cursor-pointer ${theme} xs:hidden`}>
         
             <div>INSTANT CONTACT ME</div>            
 
             {/** EXPANDING CONTENT */}
-            <div className='absolute left-0 flex-col w-fit gap-2 transition-transform scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100 duration-300 ease-in bg-white rounded p-3'>
+            <div className={`p-3 absolute left-0 flex-col w-fit gap-2 transition-transform scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100 duration-300 ease-in rounded ${theme}`}>
                 <br></br>
                 <h1>All of sudden interested? go contact me down below!</h1>
                 <ul className='flex flex-col gap-2'>
-                    <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 bg-white hover:drop-shadow'>
+                    <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 hover:drop-shadow'>
                         <a className='w-full h-full' href='https://wa.me/0881026817103' target='_blank'>fadhlinurhimawan@gmail.com</a></li>
-                    <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 bg-white hover:drop-shadow'>
+                    <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 hover:drop-shadow'>
                         <a className='w-full h-full' href='https://wa.me/0881026817103' target='_blank'>Whatsapp</a></li>
-                        <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 bg-white hover:drop-shadow'>
+                        <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 hover:drop-shadow'>
                         <a className='w-full h-full' href='https://github.com/Fadhyoung' target='_blank'>github</a></li>
-                        <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 bg-white hover:drop-shadow'>
+                        <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 hover:drop-shadow'>
                         <a className='w-full h-full' href='https://www.linkedin.com/in/fadhli-nur-himawan-0b70b8246/' target='_blank'>linkedin</a></li>
                 </ul>
             </div>
         
         </div>
 
-        <button className='lg:block group hover:w-auto w-auto p-3 absolute top-60 right-28 z-50 rounded drop-shadow animate-fly1 cursor-pointer bg-white
-                        xs:hidden hover:bg-blue-950 hover:text-amber-500'
+        {/** FLYING CONTENT DOWNLOAD RESUME */}
+        <button className={`lg:block group hover:w-auto w-auto p-3 absolute top-60 right-28 z-50 rounded drop-shadow animate-fly1 cursor-pointer ${theme}
+                        xs:hidden hover:bg-blue-950 hover:text-amber-500`}
                         onClick={() => {setIsOpen(true)}}>DOWNLOAD MY RESUME</button>
       
         
@@ -99,8 +102,8 @@ function LandingPage({onSectionClick}) {
                     Icon={<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M314 36.38c-18.59-3.06-45.8-4.47-64.27-4.38a311 311 0 0 0-51.66 4.38c-45.74 8-54.07 24.7-54.07 55.54V128h112v16H107.62C66.06 144 32.33 193.67 32 255.12v.88a163 163 0 0 0 3.13 32c9.29 46.28 38.23 80 72.49 80H128v-54c0-31.3 20.84-59.95 55-66.1l9.87-1.23H314a56 56 0 0 0 15.06-2A52.48 52.48 0 0 0 368 193.68V91.92c0-28.92-24.68-50.73-54-55.54M194.93 105.5a20.37 20.37 0 1 1 20.3-20.3a20.29 20.29 0 0 1-20.3 20.3"/><path fill="currentColor" d="M475.28 217c-10.7-42.61-38.41-73-70.9-73h-17.71v47.45c0 39.57-26 68.22-57.74 73.13a63.5 63.5 0 0 1-9.69.75H198.08a60 60 0 0 0-15.23 1.95C160.54 273.14 144 291.7 144 315.77v101.77c0 29 29.14 46 57.73 54.31c34.21 9.95 71.48 11.75 112.42 0c27.19-7.77 53.85-23.48 53.85-54.31V384H256v-16h148.38c29.44 0 54.95-24.93 67.45-61.31A156.8 156.8 0 0 0 480 256a160.6 160.6 0 0 0-4.72-39M316.51 404a20.37 20.37 0 1 1-20.3 20.3a20.29 20.29 0 0 1 20.3-20.3"/>
                         </svg>}
                     />
-                    <div className="bg-white w-36 h-48 p-3 z-30 drop-shadow border border-b-slate-300 rounded transition-transform duration-300 transform 
-                    hover:scale-150 hover:drop-shadow-lg hover:border-amber-500">
+                    <div className={`scard-${theme} w-36 h-48 p-3 z-30 drop-shadow border rounded transition-transform duration-300 transform 
+                    hover:scale-150 hover:drop-shadow-lg hover:border-amber-500`}>
                         <img className="object-cover h-full w-full rounded-full" src={`${process.env.PUBLIC_URL}/img/fotoSaya.jpg`} alt="" />
                     </div>
                     <SurroundCard 

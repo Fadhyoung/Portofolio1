@@ -1,7 +1,11 @@
 import { handleNext, handlePrevious} from "./AboutMe1"
 
+import { ThemeContext } from "../Theme";
+import { useContext } from "react";
+
 const Step1 = ({ progress, currentSlide, goToSlide }) => {
 
+    const { theme } = useContext(ThemeContext)
     const progressWidth = `${progress}%`;
 
     return (
@@ -10,13 +14,13 @@ const Step1 = ({ progress, currentSlide, goToSlide }) => {
                 <h2 className="sr-only">Steps</h2>
 
                 <div>
-                    <div className="overflow-hidden rounded-full bg-gray-200">
+                    <div className={`overflow-hidden rounded-full ${theme === "dark-theme" ? "bg-blue-900" : "bg-gray-200"}`}>
                     <div className="h-2 rounded-full transition-all duration-300 ease-in-out bg-sky-500" style={{ width: progressWidth }} ></div>
                     </div>
 
                     <ol className="mt-4 flex justify-between text-sm font-medium text-gray-500">
                         <li >                    
-                            <button className={`p-1 flex items-center justify-center rounded bg-white hover:drop-shadow ${progress >= 0 ? 'text-sky-500' : 'text-gray-500'}`}
+                            <button className={`p-1 flex items-center justify-center rounded ${theme} hover:drop-shadow ${progress >= 0 ? 'text-sky-500' : 'text-gray-500'}`}
                             onClick={() => {goToSlide(0)}}
                             >
                                 <svg
@@ -38,7 +42,7 @@ const Step1 = ({ progress, currentSlide, goToSlide }) => {
                         </li>
 
                         <li >                    
-                            <button className={`p-1 flex items-center justify-center rounded bg-white hover:drop-shadow ${progress >= 50 ? 'text-sky-500' : 'text-gray-500'}`}
+                            <button className={`p-1 flex items-center justify-center rounded ${theme} hover:drop-shadow ${progress >= 50 ? 'text-sky-500' : 'text-gray-500'}`}
                             onClick={() => {goToSlide(1)}}    
                                 >
                                 <svg
@@ -65,7 +69,7 @@ const Step1 = ({ progress, currentSlide, goToSlide }) => {
                         </li>
 
                         <li >                        
-                            <button className={`p-1 flex items-center justify-center rounded bg-white hover:drop-shadow ${progress >= 100 ? 'text-sky-500' : 'text-gray-500'}`}
+                            <button className={`p-1 flex items-center justify-center rounded ${theme} hover:drop-shadow ${progress >= 100 ? 'text-sky-500' : 'text-gray-500'}`}
                             onClick={() => {goToSlide(2)}}    
                                 >
                                 <svg

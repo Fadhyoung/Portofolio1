@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 
 import LandingPage from './section/landingPage';
 import Navbar1 from './section/Navbar';
@@ -12,9 +12,11 @@ import ContentGallery from './section/ContentGallery';
 import Banner2 from './components/Banner2';
 import Footer from './section/Footer';
 
-import Content from "./Content.json"
+import { ThemeContext } from './Theme';
 
 function App() {
+
+  const { theme } = useContext(ThemeContext)
 
   // State to control the visibility and opacity of the navbar
   const [navbarVisible, setNavbarVisible] = useState(false);
@@ -73,7 +75,7 @@ function App() {
   return (
     <>
       
-      <div className='lg:w-full xs:w-fit max-w-[2024px] m-auto grid grid-cols-1 gap-10 font-calibre'>
+      <div className={`${theme} lg:w-full xs:w-fit max-w-[2024px] m-auto grid grid-cols-1 gap-10 font-calibre`}>
 
         <div className=''><LandingPage onSectionClick={scrollToSection}/></div>
         
@@ -88,7 +90,7 @@ function App() {
         </div>
 
         <div className='' ref={sectionRefs.introduction}><Introduction /></div>
-        
+      
         <div className='m-auto lg:w-3/4 xs:w-11/12 ' ref={sectionRefs.priorCard}><PriorCard /></div>
         
         <div className='w-full my-10'>
@@ -100,15 +102,15 @@ function App() {
             onSectionClick={scrollToSection}
           />
         </div>
-        
 
-        <div className='w-full' ref={sectionRefs.allProjects}><ContentGallery data={Content.Projcet} Category={"Web"} /></div>
+        <div className='w-full' ref={sectionRefs.allProjects}><ContentGallery Category={"Web"} /></div>
 
         <div className='mx-auto lg:w-3/4 xs:w-full lg:p-0 xs:p-2'><Banner2 /></div>
 
-        <div className='w-full'><ContentGallery data={Content.Projcet} Category={"UIUX"} /></div>
+        <div className='w-full'><ContentGallery Category={"UIUX"} /></div>
+      
         
-        <div className='lg:w-3/4 xs:w-11/12 m-auto'>
+        <div className='lg:w-3/4 xs:w-11/12 m-auto '>
           <Banner3 
             FirstTitle={"Are you pleased?"}
             SecondTitle={"Check my resume for more detail about me"}

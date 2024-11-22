@@ -21,11 +21,60 @@ code {
     monospace;
 }
 
-.bg-radial-pattern {
+:root {
+  --white: rgb(255, 255, 255);
+  --sky: rgb(14 165 233);
+  --blue: rgb(23 37 84);
+  --amber: rgb(245 158 11);
+  --black: rgb(0, 0 ,0)
+}
+
+.dark-theme {
+  background-color: var(--blue);
+  color: var(--white)
+}
+
+.light-theme {
+  background-color: var(--white);
+  color: var(--black)
+}
+
+.scard-dark-theme {
+  background-color: var(--blue);
+  border-color : var(--amber);
+  color: var(--white)
+}
+
+.scard-light-theme {
+  background-color: var(--white);
+  border-color : var(--sky);
+  color: var(--black)
+}
+
+.amber-text-dark-theme {
+  color: var(--amber)
+}
+
+.bg-radial-pattern-light-theme {
   opacity: 1;
   background-image: radial-gradient(#17275c 0.5px, #ffffff 0.5px);
   background-size: 10px 10px;
 }
+
+.bg-radial-pattern-dark-theme {
+  opacity: 1;
+  background-image: radial-gradient(#ffffff 0.5px, #17275c 0.5px);
+  background-size: 10px 10px;
+}
+
+.bg-gradient-light-theme {
+  background: linear-gradient(to top, var(--white), transparent, var(--white));
+}
+
+.bg-gradient-dark-theme {
+  background: linear-gradient(to top, var(--blue), transparent, var(--blue));
+}
+
 
 .animate-fly1 {
   animation:boxAnimation 2s ease-in infinite;

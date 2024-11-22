@@ -1,4 +1,9 @@
+import { useContext } from "react"
+import { ThemeContext } from "../Theme"
+
 function Banner1({FirstTitle, SecondTitle, Desc, ButtonT, onSectionClick}) {
+
+    const { theme } = useContext(ThemeContext)
 
     const BANNER3_SECTION = {
         transform: 'translate(-50%, -50%)',
@@ -10,14 +15,12 @@ function Banner1({FirstTitle, SecondTitle, Desc, ButtonT, onSectionClick}) {
             <div className="relative w-full lg:h-auto xs:h-56 m-auto border border-sky-500" >
 
                 {/** BG IMAGE */}
-                <div className="h-full relative top-0 left-0 -z-10">
+                <div className="h-full relative top-0 left-0 z-10">
                     <img className="object-cover h-full" style={{ objectPosition: "20% center" }}  src={`${process.env.PUBLIC_URL}/img/Banner1_bg.png`} />
                 </div>
 
                 {/** FLYING CONTENT */}
-                <section className="lg:w-1/3 xs:w-2/4 p-6 absolute top-1/2 lg:left-2/3 xs:left-2/3 text-blue-950 rounded drop-shadow-lg bg-white
-                           
-                "
+                <section className={`lg:w-1/3 xs:w-2/4 p-6 absolute top-1/2 lg:left-2/3 xs:left-2/3  rounded drop-shadow-lg ${theme}`}
                  style={BANNER3_SECTION}>
                     <div className="mx-auto max-w-screen-xl">
                         <div className="mx-auto max-w-3xl text-center">

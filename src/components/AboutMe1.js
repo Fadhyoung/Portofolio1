@@ -2,9 +2,12 @@ import Icon from "../icons/icons";
 import { icons } from "../icons/icons";
 
 import Content from "../Content.json"
+import { ThemeContext } from "../Theme";
+import { useContext } from "react";
 
 const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
 
+    const { theme } = useContext(ThemeContext)
     const skills = Object.keys(icons);
 
       const slides = [
@@ -66,7 +69,7 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
                 <div className="h-full grid lg:grid-cols-4 gap-4 place-content-stretch ">
                     {
                         Content.Education.map((education, index) => (
-                            <div key={index} className="px-4 py-8 flex flex-col justify-center rounded-lg bg-sky-50 text-center">
+                            <div key={index} className={`px-4 py-8 flex flex-col justify-center rounded-lg text-center ${theme}`}>
                                 <div className="order-last text-lg font-medium text-amber-500">{education.Major}<br></br></div>
                                 <div className="text-3xl font-extrabold uppercase text-blue-950 md:text-5xl">{education.Institution}</div>
                             </div>
@@ -103,7 +106,7 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
 
                     {/** Prev Button */}
                     <div className="flex justify-center items-center xs:hidden">
-                        <button onClick={() => { handlePrevious(); }} className="h-12 w-12 xs:hidden lg:flex justify-center items-center rounded-md bg-white text-sky-500 hover:drop-shadow-md">
+                        <button onClick={() => { handlePrevious(); }} className={`h-12 w-12 xs:hidden lg:flex justify-center items-center rounded-md ${theme} hover:drop-shadow-md`}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                         </svg>
@@ -130,7 +133,7 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
 
                     {/** Next Button */}
                     <div className="flex justify-center items-center xs:hidden">
-                        <button onClick={() => { handleNext(); }} className="h-12 w-12 xs:hidden lg:flex justify-center items-center rounded-md bg-white text-sky-500 hover:drop-shadow-md">
+                        <button onClick={() => { handleNext(); }} className={`h-12 w-12 xs:hidden lg:flex justify-center items-center rounded-md ${theme} hover:drop-shadow-md`}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>

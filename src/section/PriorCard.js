@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Pagination1 from '../components/Pagination1';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import Divider1 from '../components/Divider1';
 import Card2 , {Card3} from '../components/Card';
 
-import Content from "../Content.json"
+import { LanguageContext } from '../LanguageContext';
 
 function PriorCard() {
 
-  const Projcet = Content.Projcet.filter((data) => data.Rate === 'A' && data.Category == "Web");
+  const { language, languageData, toggleLanguage } = useContext(LanguageContext);  
+
+  // const Projcet = languageData.Project.filter((data) => data.Rate === 'A' && data.Category == "Web");
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -20,14 +21,21 @@ function PriorCard() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
+  console.log("post : ", posts, "current post: ", currentPost)
+
   useEffect(() => {
     // Simulate data loading as if it were fetched
     setLoading(true);
+
+    const Projcet = languageData.Project.filter(
+      (data) => data.Rate === "A" && data.Category === "Web"
+    );
+
     setTimeout(() => {
       setPosts(Projcet)
     }, 300);
     setLoading(false);
-  }, []);
+  }, [languageData]);
 
   const handlePost = (postNumber) => {
     setTransition(true); // Trigger fade out
@@ -47,7 +55,9 @@ function PriorCard() {
     filter: 'drop-shadow(2px 2px 5px rgb(0 0 0 / 1))'
   }
   
-  console.log("yolo", posts, currentPost)
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>      

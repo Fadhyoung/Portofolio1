@@ -1,13 +1,16 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import Content from "../Content.json"
+import { useState, useEffect, useContext } from "react";
 import Card1 from "../components/Card1";
 import Divider1, { Divider2 } from '../components/Divider1';
 
-function ContentGallery({data, Category}) {
+import { LanguageContext } from "../LanguageContext";
+import { ThemeContext } from "../Theme";
 
-    const WebProjcet = data.filter((data) => data.Category === Category);
-    const WebProjcetLength = WebProjcet.length
+function ContentGallery({Category}) {
+
+    const { language, languageData } = useContext(LanguageContext);
+    const { theme } = useContext(ThemeContext)
+    
 
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -15,12 +18,15 @@ function ContentGallery({data, Category}) {
     const [postsPerPage, setPostsPerPage] = useState(4);
     const [transition, setTransition] = useState('translateX(0)');
 
+    const WebProjcetLength = posts.length
+
     useEffect(() => {
         // Simulate data loading as if it were fetched
         setLoading(true);
+        const WebProjcet = languageData.Project.filter((data) => data.Category === Category);
         setPosts(WebProjcet); // Use the imported JSON data
         setLoading(false);
-      }, []);
+      }, [languageData]);
 
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;

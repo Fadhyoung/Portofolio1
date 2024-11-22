@@ -1,6 +1,5 @@
 {
-    "en" : {
-        "Project" : [
+    "Project" : [
         {
             "Img" : "/img/retrieval.png",
             "Title" : "Retrieval App",
@@ -87,98 +86,7 @@
             "Technology" : ["Figma", "Adobe Illustrator"],
             "Attribute" : ["High Layout Design", "Effective UI"]
         }
-        ]
-    },
-    "id" : {
-        "Project": [
-            {
-                "Img": "/img/retrieval.png",
-                "Title": "Aplikasi Retrieval",
-                "Description": "Pengembangan aplikasi web yang membantu layanan pelanggan untuk mendapatkan informasi yang mereka butuhkan.",
-                "Link": "https://github.com/Fadhyoung",
-                "cover_img": "/img/retrieval.png",
-                "home_img": "/img/retrieval_homepage.png",
-                "Category": "Web",
-                "Rate": "A",
-                "Technology": ["Python", "Js Native", "Flask"],
-                "Attribute": ["Aplikasi web responsif", "Web fluid", "Program AI Backend", "Pemilihan AI"]
-            },
-            {
-                "Img": "/img/dasa.png",
-                "Title": "DASA: Delta Sentiment Analysis",
-                "Description": "DASA adalah aplikasi yang terdiri dari empat model AI analisis sentimen yang dapat membantu mendeteksi sentimen dari sebuah teks.",
-                "Link": "https://github.com/Fadhyoung",
-                "cover_img": "/img/dasa.png",
-                "home_img": "/img/dasa_home.png",
-                "Category": "Web",
-                "Rate": "A",
-                "Technology": ["Python", "ML", "Flask"],
-                "Attribute": ["Canggih", "Pilihan Beragam", "Responsif", "Akurasi 95%"]
-            },
-            {
-                "Img": "/img/ascent.png",
-                "Title": "ASCENT: Aspiration Center",
-                "Description": "ASCENT adalah aplikasi layanan pengguna yang menyimpan aspirasi pengguna.",
-                "Link": "https://github.com/Fadhyoung",
-                "cover_img": "/img/ascent.png",
-                "home_img": "/img/ascent_home.png",
-                "Category": "Web",
-                "Rate": "A",
-                "Technology": ["Java", "Springboot", "Javascript"],
-                "Attribute": ["Responsif", "Keamanan Ketat", "Penyesuaian API"]
-            },
-            {
-                "Img": "/img/Pahe.png",
-                "Title": "FCLONE - Proyek Kloning PAHE 2023",
-                "Description": "Fclone adalah proyek pribadi saya yang berfokus pada kloning tampilan aplikasi web tertentu, lalu menyesuaikannya agar lebih khas sesuai preferensi saya.",
-                "Link": "https://fadhyoung.github.io/pahe_clone/",
-                "Category": "Web",
-                "Rate": "B",
-                "Technology": ["HTML", "CSS", "Javascript"],
-                "Attribute": ["Desain Tata Letak Tinggi", "UI Efektif"]
-            },
-            {
-                "Img": "/img/epicGameStore.png",
-                "Title": "FCLONE - Proyek Kloning Epic Games Store 2023",
-                "Description": "Fclone adalah proyek pribadi saya yang berfokus pada kloning tampilan aplikasi web tertentu, lalu menyesuaikannya agar lebih khas sesuai preferensi saya.",
-                "Link": "https://fadhyoung.github.io/epicGamesStore_clone/",
-                "Category": "Web",
-                "Rate": "B",
-                "Technology": ["HTML", "CSS", "Javascript"],
-                "Attribute": ["Desain Tata Letak Tinggi", "UI Efektif"]
-            },
-            {
-                "Img": "/img/MAEMS.png",
-                "Title": "MAEMS",
-                "Description": "",
-                "Link": "",
-                "Category": "UIUX",
-                "Rate": "A",
-                "Technology": ["Figma", "Adobe Illustrator"],
-                "Attribute": ["Desain Tata Letak Tinggi", "UI Efektif"]
-            },
-            {
-                "Img": "/img/SULAI.png",
-                "Title": "SULAI",
-                "Description": "",
-                "Link": "",
-                "Category": "UIUX",
-                "Rate": "A",
-                "Technology": ["Figma", "Adobe Illustrator"],
-                "Attribute": ["Desain Tata Letak Tinggi", "UI Efektif"]
-            },
-            {
-                "Img": "/img/TUTOR.png",
-                "Title": "TENTOR",
-                "Description": "",
-                "Link": "",
-                "Category": "UIUX",
-                "Rate": "A",
-                "Technology": ["Figma", "Adobe Illustrator"],
-                "Attribute": ["Desain Tata Letak Tinggi", "UI Efektif"]
-            }
-        ]   
-    },
+    ],
 
     "Banner" : [
         {

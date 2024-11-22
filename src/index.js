@@ -4,10 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { LanguageProvider } from './LanguageContext';
+import { ThemeProvider } from './Theme';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>    
+    </ThemeProvider>
   </React.StrictMode>
 );
 
