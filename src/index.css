@@ -18,7 +18,7 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 
 :root {
@@ -41,22 +41,16 @@ code {
 .bg-blue { background-color: var(--blue);}
 .text-blue { color: var(--blue) }
 
-.border-red { border : 1px solid var(--red) }
+.border-red { border : 1px solid var(--red)}
 .border-blue { border-color: var(--blue)}
 .border-amber { border-color: var(--amber)}
 
 /* BANNER 4 STYLE CARDS  */
 
-:root {
-  --custom-box-style: padding: 0.5rem; 
-  --custom-box-radius: 1rem; 
-  --custom-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-}
-
 .custom-box {
-  padding: var(--custom-box-style);
-  border-radius: var(--custom-box-radius);
-  box-shadow: var(--custom-box-shadow);
+  padding: 0.5rem; ;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 /* END ============= */
@@ -145,11 +139,6 @@ code {
 /* width */
 ::-webkit-scrollbar {
   width:4px; height:4px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  
 }
 
 /* Handle */
