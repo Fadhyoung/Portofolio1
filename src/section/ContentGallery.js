@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
-import Card1 from "../components/Card1";
+import { Card1 } from "../components/Cards";
 import Divider1, { Divider2 } from '../components/Divider1';
 
 import { LanguageContext } from "../LanguageContext";

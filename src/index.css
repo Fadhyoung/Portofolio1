@@ -23,11 +23,45 @@ code {
 
 :root {
   --white: rgb(255, 255, 255);
-  --sky: rgb(14 165 233);
-  --blue: rgb(23 37 84);
-  --amber: rgb(245 158 11);
-  --black: rgb(0, 0 ,0)p
+  --sky: #2E75AB;
+  --blue: #0D2237;
+  --amber: #FF8E2B;
+  --red: #F56565;
+  --smblue: rgba(13, 34, 55, 0.55);
+  --black: rgb(0, 0 ,0)
 }
+
+
+
+.bg-sky { background-color: var(--sky); }
+.bg-sky-half { background-color: rgb(46, 117, 171, 0.25); }
+.border-sky { border : 1px solid var(--sky) }
+.text-sky { color: var(--sky)}
+
+.bg-blue { background-color: var(--blue);}
+.text-blue { color: var(--blue) }
+
+.border-red { border : 1px solid var(--red) }
+.border-blue { border-color: var(--blue)}
+.border-amber { border-color: var(--amber)}
+
+/* BANNER 4 STYLE CARDS  */
+
+:root {
+  --custom-box-style: padding: 0.5rem; 
+  --custom-box-radius: 1rem; 
+  --custom-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.custom-box {
+  padding: var(--custom-box-style);
+  border-radius: var(--custom-box-radius);
+  box-shadow: var(--custom-box-shadow);
+}
+
+/* END ============= */
+
+/* THEME TOGGLE */
 
 .dark-theme {
   background-color: var(--blue);
@@ -36,12 +70,24 @@ code {
 
 .light-theme {
   background-color: var(--white);
-  color: var(--black)
+  color: var(--blue)
 }
+
+.border-dark-theme {
+  border-color: var(--white);
+}
+
+.border-light-theme {
+  border-color: var(--blue);
+}
+
+/* END ============= */
+
+/* SUROUND CARD */
 
 .scard-dark-theme {
   background-color: var(--blue);
-  border-color : var(--amber);
+  border-color : var(--sky);
   color: var(--white)
 }
 
@@ -55,15 +101,31 @@ code {
   color: var(--amber)
 }
 
+/* END ============= */
+
+/* GRADIENT CLASS STYLE */
+
+.gradient-3c {
+  background: linear-gradient(to right, var(--blue), var(--sky), var(--blue));
+}
+
+.gradient-3c1 {
+  background: linear-gradient(to right, transparent, var(--sky), transparent);
+}
+
+.gradient-tb-2c {
+  background: linear-gradient(to bottom, transparent, var(--sky));
+}
+
 .bg-radial-pattern-light-theme {
   opacity: 1;
-  background-image: radial-gradient(#17275c 0.5px, #ffffff 0.5px);
+  background-image: radial-gradient(var(--blue) 0.5px, #ffffff 0.5px);
   background-size: 10px 10px;
 }
 
 .bg-radial-pattern-dark-theme {
   opacity: 1;
-  background-image: radial-gradient(#ffffff 0.5px, #17275c 0.5px);
+  background-image: radial-gradient(#ffffff 0.5px, var(--blue) 0.5px);
   background-size: 10px 10px;
 }
 

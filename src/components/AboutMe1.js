@@ -35,11 +35,11 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
                 <div className="h-72 lg:p-0 xs:p-2 grid grid-rows-2 gap-2 text-left items-center justify-items-stretch">
                     {/** LINK TO SOCIAL MEDIA */}
                     {/** LABEL 1 */}
-                    <div className="w-full p-1 h-full cursor-pointer border-2 rounded-lg bg-blue-950 border-amber-500
+                    <div className="w-full p-1.5 h-full cursor-pointer rounded-lg bg-blue-950
                         transition-all hover:scale-95 
                     " >
                         <div className="w-full h-full grid grid-cols-3">
-                            <div className="ml-4 self-center text-4xl font-semibold z-10 text-amber-500">LINKEDIN</div>
+                            <div className="ml-4 self-center text-4xl font-semibold z-10 text-white">LINKEDIN</div>
                             <div className="col-span-2 relative rounded-md overflow-hidden">
                                 <div className="w-full h-full absolute bg-gradient-to-r from-blue-950 to-sky-500"></div>
                                 <img className="object-cover h-full w-full" src={`${process.env.PUBLIC_URL}/img/linkedin.png`} alt="" />
@@ -47,13 +47,13 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
                         </div>                        
                     </div>
                     {/** LABEL 2 */}
-                    <div className="w-full p-1 h-full cursor-pointer border-2 rounded-lg bg-blue-950 border-amber-500
+                    <div className="w-full p-1.5 h-full cursor-pointer rounded-lg bg-blue-950
                         transition-all hover:scale-95
                     " >
                         <div className="w-full h-full grid grid-cols-3">
-                            <div className="ml-4 self-center text-4xl font-semibold z-10 text-amber-500">LINKEDIN</div>
+                            <div className="ml-4 self-center text-4xl font-semibold z-40 text-white">LINKEDIN</div>
                             <div className="col-span-2 relative rounded-md overflow-hidden">
-                                <div className="w-full h-full absolute bg-gradient-to-r from-blue-950 to-sky-500"></div>
+                                <div className="w-full h-full absolute z-10 bg-gradient-to-r from-blue-950 to-sky-500"></div>
                                 <img className="object-cover h-full w-full" src={`${process.env.PUBLIC_URL}/img/linkedin.png`} alt="" />
                             </div>
                         </div>                        
@@ -71,7 +71,7 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
                         Content.Education.map((education, index) => (
                             <div key={index} className={`px-4 py-8 flex flex-col justify-center rounded-lg text-center ${theme}`}>
                                 <div className="order-last text-lg font-medium text-amber-500">{education.Major}<br></br></div>
-                                <div className="text-3xl font-extrabold uppercase text-blue-950 md:text-5xl">{education.Institution}</div>
+                                <div className={`text-3xl font-extrabold uppercase ${theme} md:text-5xl`}>{education.Institution}</div>
                             </div>
                         ))}
                 </div>
@@ -84,7 +84,7 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
             <div className="w-full p-2 col-span-4 grid lg:grid-cols-8 xs:grid-cols-4 gap-8">
                 {
                     skills.map((icon, index) => (
-                        <div className="lg:p-3 xs:p-5 w-full flex flex-col justify-center gap-3 items-center border rounded text-center text-blue-950 border-blue-950">
+                        <div className={`lg:p-3 xs:p-5 w-full flex flex-col justify-center gap-3 items-center border rounded text-center ${theme} border-${theme}`}>
                             <div className=" p-3 border rounded-md drop-shadow-md"><Icon icon={icon} /></div>
                             <h2 className="text-lg font-semibold text-amber-500">{icon}</h2>
                         </div>
@@ -98,11 +98,11 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
     return (
         <>
            <div className="flex flex-col">
-                <div className="w-full py-2 text-center border-t border-sky-500">
+                <div className="w-full py-2 text-center text-lg font-medium text-white border-t border-amber gradient-3c1 ">
                     ABOUT ME
                 </div>
 
-                <div className="w-full py-4 grid grid-cols-8 justify-items-center border border-sky-500">
+                <div className="w-full py-4 grid grid-cols-8 justify-items-center border border-amber">
 
                     {/** Prev Button */}
                     <div className="flex justify-center items-center xs:hidden">

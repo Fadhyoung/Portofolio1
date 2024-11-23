@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../Theme';
 
 function AutoScroll() {
 
+    const { theme } = useContext(ThemeContext)
+
     const Icon = ({ Icon, Name }) => {
         return (
-            <div className='w-12
-            text-blue-950 
-             group-hover:text-white'>{Icon}</div>
+            <div className={`w-12 ${theme} group-hover:text-white`}>{Icon}</div>
         );
       };
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import Divider1 from '../components/Divider1';
-import Card2 , {Card3} from '../components/Card';
+import Card2 , {Card3} from '../components/Cards';
 
 import { LanguageContext } from '../LanguageContext';
 
@@ -48,7 +48,9 @@ function PriorCard() {
 };
 
   const RADIAL_BG = {
-    background: 'radial-gradient(rgb(14 165 233), rgb(23 37 84))'
+    background: 'radial-gradient(var(--sky), var(--blue))',
+    border: '1px solid var(--amber)',
+    filter: 'drop-shadow(0 5px 10px rgba(0, 0, 0, 0.35))'
   }
 
   const DOPE_SHADOW = {
@@ -66,7 +68,7 @@ function PriorCard() {
         <Divider1 
           title = {"Best Project"} length={posts.length} postsPerPage={postsPerPage}
         />
-        <div className="w-full h-auto lg:p-6 xs:p-4 grid lg:grid-cols-4 lg:grid-rows-none xs:grid-rows-4 lg:gap-6 xs:gap-4 rounded-lg" style={RADIAL_BG}>
+        <div className="w-full h-auto lg:p-6 xs:p-4 grid lg:grid-cols-4 lg:grid-rows-none xs:grid-rows-4 lg:gap-6 xs:gap-4 rounded-lg " style={RADIAL_BG}>
                 {/** LEFT BAR */}
                   {posts.length > 0 ? (
                       <div className={`w-full lg:col-span-3 lg:row-span-1 xs:row-span-3  ${transition ? 'opacity-0 duration-200' : 'opacity-1 duration-200' }`}><Card3 content={posts[currentPost]} /></div>

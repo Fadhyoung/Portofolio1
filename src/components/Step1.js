@@ -14,8 +14,8 @@ const Step1 = ({ progress, currentSlide, goToSlide }) => {
                 <h2 className="sr-only">Steps</h2>
 
                 <div>
-                    <div className={`overflow-hidden rounded-full ${theme === "dark-theme" ? "bg-blue-900" : "bg-gray-200"}`}>
-                    <div className="h-2 rounded-full transition-all duration-300 ease-in-out bg-sky-500" style={{ width: progressWidth }} ></div>
+                    <div className={`overflow-hidden rounded-full bg-sky-half`}>
+                    <div className="h-2 rounded-full transition-all duration-300 ease-in-out bg-sky" style={{ width: progressWidth }} ></div>
                     </div>
 
                     <ol className="mt-4 flex justify-between text-sm font-medium text-gray-500">

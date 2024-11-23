@@ -26,7 +26,7 @@ function Navbar1({onSectionClick}) {
 
     return (
         <>
-            <nav className={`flex flex-row lg:justify-between xs:justify-center items-center w-full px-20 py-3 top-0 z-50 ${theme}`}>
+            <nav className={`flex flex-row lg:justify-between xs:justify-center items-center w-full px-20 top-0 z-50 ${theme}`}>
                 <div className={`w-20 m-2 p-2 box-border rounded bg-white`}>
                     <img src={GetLogoImg} alt="Logo" />
                 </div>
@@ -49,7 +49,7 @@ function Navbar1({onSectionClick}) {
                         </svg>
                     </button>
                     {/** TOGGLE THEME BUTTON */}
-                    <button onClick={toggleTheme}>
+                    <button className='border-none' onClick={toggleTheme}>
                         {
                             theme === "light-theme" ? (
                                 <svg className='size-6' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">

@@ -16,7 +16,7 @@ function LandingPage({onSectionClick}) {
           <div className={` group
           lg:w-28 md:w-28 xs:w-24 h-32 p-3 grid grid-rows-2 place-content-center place-items-center text-center border rounded scard-${theme}
           hover:bg-sky-500 hover:text-white transition-transform duration-300 hover:scale-90`}>
-            <div className='w-3/4 flex items-center justify-center text-sky-500 group-hover:text-white'>{Icon}</div>
+            <div className='w-3/4 flex items-center justify-center text-sky group-hover:text-white'>{Icon}</div>
             <div className='flex flex-col items-center'>
                 <h4 className='flex items-center justify-cente font-bold amber-text-${theme} group-hover:text-amber-500'>{Title}</h4>
                 <p className='text-xs font-thin'>{Glimpse}</p>
@@ -37,12 +37,12 @@ function LandingPage({onSectionClick}) {
         </Modal>
 
         {/** FLYING INFORMATION EXPANDING */}
-        <div className={`lg:block group hover:w-72 w-auto p-3 absolute top-20 left-20 z-50 rounded drop-shadow animate-fly1 cursor-pointer ${theme} xs:hidden`}>
+        <div className={`lg:block group hover:w-72 w-auto p-3 absolute top-20 left-20 z-50 rounded drop-shadow animate-fly1 cursor-pointer ${theme} border border-amber xs:hidden`}>
         
             <div>INSTANT CONTACT ME</div>            
 
             {/** EXPANDING CONTENT */}
-            <div className={`p-3 absolute left-0 flex-col w-fit gap-2 transition-transform scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100 duration-300 ease-in rounded ${theme}`}>
+            <div className={`p-3 absolute top-14 left-0 flex-col w-fit gap-2 transition-transform scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100 duration-300 ease-in rounded ${theme} border border-amber`}>
                 <br></br>
                 <h1>All of sudden interested? go contact me down below!</h1>
                 <ul className='flex flex-col gap-2'>
@@ -60,7 +60,7 @@ function LandingPage({onSectionClick}) {
         </div>
 
         {/** FLYING CONTENT DOWNLOAD RESUME */}
-        <button className={`lg:block group hover:w-auto w-auto p-3 absolute top-60 right-28 z-50 rounded drop-shadow animate-fly1 cursor-pointer ${theme}
+        <button className={`lg:block group hover:w-auto w-auto p-3 absolute top-60 right-28 z-50 rounded drop-shadow animate-fly1 cursor-pointer ${theme} border border-amber
                         xs:hidden hover:bg-blue-950 hover:text-amber-500`}
                         onClick={() => {setIsOpen(true)}}>DOWNLOAD MY RESUME</button>
       
@@ -74,13 +74,13 @@ function LandingPage({onSectionClick}) {
         <div className="relative top-0  flex flex-col gap-2 justify-center items-center w-full h-full">
         
             {/* THE LINE */}
-            <div className='absolute w-full h-24 z-10 bg-gradient-to-r from-blue-950 via-sky-500 to-blue-950'></div>
+            <div className='absolute w-full h-24 z-10 gradient-3c'></div>
             
             <div className=" p-3 relative top-0 z-30 flex flex-row gap-2 justify-center items-center">
                 <div className="absolute self-center -z-30 w-full h-72 border border-amber-400"
                     style={{
                         mask: "linear-gradient(to bottom right, transparent 5%, black 15%, black 35%, transparent 45%, transparent 55%, black 65%, black 85%, transparent 95%)",
-                        WebkitMask: "linear-gradient(to bottom right, transparent 5%, black 15%, black 35%, transparent 45%, transparent 55%, black 65%, black 85%, transparent 95%)",
+                        WebkitMask: "linear-gradient(to bottom right, transparent 5%, black 15%, black 35%, transparent 45%, transparent 55%, black 65%, black 85%, transparent 95%)"
                     }}                
                 ></div>
                 <div className="flex flex-col gap-2 justify-between items-center ">
@@ -103,7 +103,7 @@ function LandingPage({onSectionClick}) {
                         </svg>}
                     />
                     <div className={`scard-${theme} w-36 h-48 p-3 z-30 drop-shadow border rounded transition-transform duration-300 transform 
-                    hover:scale-150 hover:drop-shadow-lg hover:border-amber-500`}>
+                    hover:scale-150 hover:drop-shadow-lg`} style={{'border-color': 'var(--amber)'}}>
                         <img className="object-cover h-full w-full rounded-full" src={`${process.env.PUBLIC_URL}/img/fotoSaya.jpg`} alt="" />
                     </div>
                     <SurroundCard 
