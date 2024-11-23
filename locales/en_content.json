@@ -1,0 +1,123 @@
+{
+    "Project" : [
+        {
+            "Img" : "/img/retrieval.png",
+            "Title" : "Retrieval App",
+            "Description" : "Decelopment a web app that help in customer service feature that could help user to get information they need.",
+            "Link" : "https://github.com/Fadhyoung",
+            "cover_img" : "/img/retrieval.png",
+            "home_img" : "/img/retrieval_homepage.png",
+            "Category" : "Web",
+            "Rate" : "A",
+            "Technology" : ["Python", "Js Native", "Flask"],
+            "Attribute" : ["Responsive web app", "Fluid web", "Backend Ai Program", "AI Selection"]
+        },
+        {
+            "Img" : "/img/dasa.png",
+            "Title" : "DASA : Delta Sentiment Analysis",
+            "Description" : "DASA in an application that consist of four sentiment analysis ai model that could help for detecting sentiment form a text",
+            "Link" : "https://github.com/Fadhyoung",
+            "cover_img" : "/img/dasa.png",
+            "home_img" : "/img/dasa_home.png",
+            "Category": "Web",
+            "Rate" : "A",
+            "Technology" : ["Python", "ML", "Flask"],
+            "Attribute" : ["Sophisicated", "Multiple Choice", "Responsive", "95% Accuracy"]
+        },
+        {
+            "Img" : "/img/ascent.png",
+            "Title" : "ASCENT : Aspiration Center",
+            "Description" : "ASCENT in an application user service website that store user aspiration",
+            "Link" : "https://github.com/Fadhyoung",
+            "cover_img" : "/img/ascent.png",
+            "home_img" : "/img/ascent_home.png",
+            "Category": "Web",
+            "Rate" : "A",
+            "Technology" : ["Java", "Springboot", "Javascript"],
+            "Attribute" : ["Responsive", "Strict Security", "API Adjustmen"]
+        },
+        {
+            "Img" : "/img/Pahe.png",
+            "Title" : "FCLONE - PAHE Clone Project 2023",
+            "Description" : "Fclone is my personal project that focuses on cloning the appearance of certain web apps and then adjusting them to make them more distinct based on my preferences.",
+            "Link" : "https://fadhyoung.github.io/pahe_clone/",
+            "Category": "Web",
+            "Rate" : "B",
+            "Technology" : ["HTML", "CSS", "Javascript"],
+            "Attribute" : ["High Layout Design", "Effective UI"]
+        },
+        {
+            "Img" : "/img/epicGameStore.png",
+            "Title" : "FCLONE - Epic Games Store Clone Project 2023",
+            "Description" : "Fclone is my personal project that focuses on cloning the appearance of certain web apps and then adjusting them to make them more distinct based on my preferences.",
+            "Link" : "https://fadhyoung.github.io/epicGamesStore_clone/",
+            "Category": "Web",
+            "Rate" : "B",
+            "Technology" : ["HTML", "CSS", "Javascript"],
+            "Attribute" : ["High Layout Design", "Effective UI"]
+        },
+        {
+            "Img" : "/img/MAEMS.png",
+            "Title" : "MAEMS",
+            "Description" : "",
+            "Link" : "",
+            "Category": "UIUX",
+            "Rate" : "A",
+            "Technology" : ["Figma", "Adobe Illustrator"],
+            "Attribute" : ["High Layout Design", "Effective UI"]
+        },
+        {
+            "Img" : "/img/SULAI.png",
+            "Title" : "SULAI",
+            "Description" : "",
+            "Link" : "",
+            "Category": "UIUX",
+            "Rate" : "A",
+            "Technology" : ["Figma", "Adobe Illustrator"],
+            "Attribute" : ["High Layout Design", "Effective UI"]
+        },
+        {
+            "Img" : "/img/TUTOR.png",
+            "Title" : "TENTOR",
+            "Description" : "",
+            "Link" : "",
+            "Category": "UIUX",
+            "Rate" : "A",
+            "Technology" : ["Figma", "Adobe Illustrator"],
+            "Attribute" : ["High Layout Design", "Effective UI"]
+        }
+    ],
+
+    "Banner" : [
+        {
+            "Title1" : "",
+            "Title2" : "",
+            "Title3" : "",
+            "Desc1" : "",
+            "Desc2" : "",
+            "Desc3" : "",
+            "button1" : "",
+            "button2" : ""
+        }
+    ],
+
+    "Education" : [
+        {
+            "Institution": "University of Jember",
+            "Major": "Information Technology"
+        },
+        {
+            "Institution" : "Metrodata Academy",
+            "Major": "Full Stack Developer"
+        },
+        {
+            "Institution": "Orbit Futura Academy",
+            "Major": "AI Development"
+        },
+        {
+            "Institution": "Daffodils English Course",
+            "Major": "English Speaking Course"
+        }
+    ]
+
+}

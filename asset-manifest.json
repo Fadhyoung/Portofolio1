@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portofolio1/static/css/main.1e7bb5cd.css",
-    "main.js": "/Portofolio1/static/js/main.35db8515.js",
+    "main.css": "/Portofolio1/static/css/main.7299619e.css",
+    "main.js": "/Portofolio1/static/js/main.9f44f39e.js",
     "static/js/453.ed3810f9.chunk.js": "/Portofolio1/static/js/453.ed3810f9.chunk.js",
     "static/media/fotoSaya.jpg": "/Portofolio1/static/media/fotoSaya.1c73f2d6f25358368b54.jpg",
     "static/media/calibre_bold.woff2": "/Portofolio1/static/media/calibre_bold.00f0959b623a7d9de033.woff2",
@@ -24,12 +24,12 @@
     "static/media/css3.svg": "/Portofolio1/static/media/css3.297582b2ef2a8d5b3bea5f358b0e1979.svg",
     "static/media/html-5-logo.svg": "/Portofolio1/static/media/html-5-logo.0520c57181e2ed9214b151582270b7e6.svg",
     "static/media/material-symbols--flutter.svg": "/Portofolio1/static/media/material-symbols--flutter.3c02568ccab0875fe644eaeadab1f357.svg",
-    "main.1e7bb5cd.css.map": "/Portofolio1/static/css/main.1e7bb5cd.css.map",
-    "main.35db8515.js.map": "/Portofolio1/static/js/main.35db8515.js.map",
+    "main.7299619e.css.map": "/Portofolio1/static/css/main.7299619e.css.map",
+    "main.9f44f39e.js.map": "/Portofolio1/static/js/main.9f44f39e.js.map",
     "453.ed3810f9.chunk.js.map": "/Portofolio1/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e7bb5cd.css",
-    "static/js/main.35db8515.js"
+    "static/css/main.7299619e.css",
+    "static/js/main.9f44f39e.js"
   ]
 }
