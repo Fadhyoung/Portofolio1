@@ -14,25 +14,27 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
         {
           id: 1,
           content: (
-            <div className="w-full h-full lg:flex-shrink-0 grid lg:grid-cols-3 lg:grid-rows-none lg:place-content-center gap-6
-            xs:w-full xs:grid-cols-none xs:flex xs:flex-col">
+            <div className="w-full h-full lg:flex-shrink-0 grid lg:grid-cols-3 lg:grid-rows-none place-content-center lg:gap-6 xs:gap-0
+            xs:w-full lg:GRID_AM_LG xs:GRID_AM_XS">
                 {/** LEFT CONTENT */}
-                <div className="h-72 flex flex-col text-right lg:items-end lg:justify-between xs:items-center">
+                <div className="lg:h-72 xs:h-full flex flex-col text-right lg:items-end lg:justify-between xs:items-center" style={{ gridArea: "information"}}>
                     <div className="w-auto flex flex-col gap-2 lg:items-end xs:items-center">
                         <h1 className="font-bold text-2xl text-sky-500">FADHLI NUR HIMAWAN</h1>
-                        <p className="bg-blue-950 py-1 px-3 rounded text-sky-50">You can call me <span className="text-amber-500">Hima</span></p>
-                        <div className="flex gap-2 text-lg xs:items-center lg:items-end"><h1 className="font-bold text-amber-500">22 years old </h1><span>Wonogiri, 11 March 2002</span></div>
+                        <div className="flex gap-2 text-xs xs:items-center lg:items-end text-white">
+                            <p className="bg-blue-950 py-1 px-3 rounded ">You can call me <span className="text-amber-500">Hima</span></p>
+                            <div className="flex bg-blue-950 py-1 px-3 rounded"><h1 className="font-bold text-amber-500">22 years old <span className="font-normal text-white"> Wonogiri, 11 March 2002</span></h1></div>
+                        </div>
                     </div>
                     <p className="lg:p-0 xs:p-3 font-medium text-sm text-justify indent-10">
                     Passionate about application and AI development. Skilled in developing major web applications, with a focus on creating interactive and visually appealing front-end pages, as well as handling computational back-end processes. A day-to-day English consumer, continuously working to stay updated with global news and trends. A keen enthusiasm for artificial intelligence.
                     </p>
                 </div>
                 {/** CENTER CONTENT */}
-                <div className="h-72 w-full lg:p-0 xs:p-2">
+                <div className="lg:h-72 xs:h-[23rem] w-full lg:p-0 xs:p-2 " style={{ gridArea: "photo"}}>
                     <img className="object-cover h-full w-full rounded-md" src={`${process.env.PUBLIC_URL}/img/fotoSaya.jpg`} alt="" />
                 </div>
-                {/** RIGHT CONTENT */}
-                <div className="h-72 lg:p-0 xs:p-2 grid grid-rows-2 gap-2 text-left items-center justify-items-stretch">
+                {/** RIGHT CONTENT LG */}
+                <div className="h-72 lg:p-0 xs:p-2 xs:hidden lg:grid grid-rows-2 gap-2 text-left items-center justify-items-stretch">
                     {/** LINK TO SOCIAL MEDIA */}
                     {/** LABEL 1 */}
                     <div className="w-full p-1.5 h-full cursor-pointer rounded-lg bg-blue-950
@@ -59,6 +61,19 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
                         </div>                        
                     </div>
                 </div>
+
+                {/** RIGHT CONTENT xs */}
+                <div className="w-full h-full p-2 lg:hidden xs:flex gap-5 justify-center items-center text-center">
+                    <div className={`w-full p-1  flex justify-center border rounded-md border-sky ${theme} text-sky`}>
+                        <svg className="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+                        <h4 className='flex items-center justify-cente font-bold amber-text-${theme} group-hover:text-amber-500'>LINKEDIN</h4>
+                    </div>
+                    <div className={`w-full p-1  flex justify-center border rounded-md border-sky ${theme} text-sky`}>
+                        <svg className="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"/></svg>
+                        <h4 className='flex items-center justify-cente font-bold amber-text-${theme} group-hover:text-amber-500'>LINKEDIN</h4>
+                    </div>
+                </div>
+
             </div>
           )
         },

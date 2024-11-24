@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { ThemeContext } from "../Theme";
 
+// IMPLEMENTED IN CONTENT GALLERY
 export const Card1 = ({img, title, description, link, technology, attribute}) => {
 
     const { theme } = useContext(ThemeContext)
@@ -11,8 +12,8 @@ export const Card1 = ({img, title, description, link, technology, attribute}) =>
             <a href={link} target="_blank" className="w-full xs:h-96 lg:h-96 group relative block overflow-hidden">
                 <span className="absolute inset-0 border-2 rounded-3xl border-dashed border-blue-950"></span>
 
-                <div className={`p-0.5 h-full w-full grid grid-rows-3 transform items-start border rounded-3xl
-                border-sky-500 bg-sky transition-transform 
+                <div className={`p-0.5 h-full w-full grid grid-rows-3 transform items-start rounded-3xl
+                bg-sky transition-transform 
                 group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:bg-sky-500`}>
                     <div className="w-full h-full row-span-2">
                         <img className="

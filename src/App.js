@@ -6,8 +6,7 @@ import Navbar1 from './section/Navbar';
 import Introduction from './section/Introduction';
 import PriorCard from './section/PriorCard';
 import Pagination1 from './components/Pagination1';
-import Banner1, { Banner2, Banner4 } from './components/Banners';
-import Banner3 from './components/Banner3';
+import Banner1, { Banner2, Banner3, Banner4 } from './components/Banners';
 import ContentGallery from './section/ContentGallery';
 import Footer from './section/Footer';
 
@@ -83,7 +82,7 @@ function App() {
           <br></br>
           
           <div
-            className={` fixed top-0 w-full z-50 transition-opacity duration-300 ${
+            className={`fixed top-0 w-full z-50 transition-opacity duration-300 ${
               navbarVisible ? (scrollingDown ? 'opacity-100' : 'opacity-0') : 'hidden'
             }`}
           >
@@ -98,7 +97,7 @@ function App() {
           
           <div className='m-auto lg:w-3/4 xs:w-11/12 ' ref={sectionRefs.priorCard}><PriorCard /></div>
           
-          <div className='w-3/4 mx-auto my-28'>
+          <div className='lg:w-3/4 xs:w-11/12 mx-auto my-28'>
             <Banner4 
               FirstTitle={"What do you think about my portofolio?"}
               SecondTitle={"Roll down please"}
@@ -111,7 +110,7 @@ function App() {
         </div>         
 
         {/** BOTTOM BACKGOUND */}
-        <div className={`w-full h-full pt-36 -mt-24 flex flex-col gap-10 rounded-[6rem] ${theme}`}>
+        <div className={`w-full h-full pt-36 -mt-24 flex flex-col gap-10 lg:rounded-[6rem] xs:rounded-[3rem] ${theme}`}>
           
           <div className='w-full' ref={sectionRefs.allProjects}><ContentGallery Category={"Web"} /></div>
 

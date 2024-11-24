@@ -45,13 +45,58 @@ code {
 .border-blue { border-color: var(--blue)}
 .border-amber { border-color: var(--amber)}
 
+/* ===== ABOUT ME ===== */
+
+@layer utilities {
+  .GRID_AM_LG {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "information photo socmed";
+  } 
+  .GRID_AM_XS {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "information"
+      "socmed";
+  }
+}
+
+
 /* BANNER 4 STYLE CARDS  */
 
 .custom-box {
-  padding: 0.5rem; ;
+  padding: 0.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
+
+@layer utilities {
+  .GRID_LG {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "blank photo quote quote"
+      "blank photo quote quote"
+      "blank photo question question"
+      "figma figma question question";
+  }
+
+  .GRID_XS {
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "figma"
+      "question";
+  }
+}
+
 
 /* END ============= */
 
