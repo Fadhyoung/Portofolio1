@@ -77,7 +77,7 @@ function LandingPage({onSectionClick}) {
             <div className='absolute w-full h-24 z-10 gradient-3c'></div>
             
             <div className=" p-3 relative top-0 z-30 flex flex-row gap-2 justify-center items-center">
-                <div className="absolute self-center -z-30 w-full h-72 border border-amber-400"
+                <div className="absolute self-center -z-30 w-full h-72 border border-amber"
                     style={{
                         mask: "linear-gradient(to bottom right, transparent 5%, black 15%, black 35%, transparent 45%, transparent 55%, black 65%, black 85%, transparent 95%)",
                         WebkitMask: "linear-gradient(to bottom right, transparent 5%, black 15%, black 35%, transparent 45%, transparent 55%, black 65%, black 85%, transparent 95%)"
