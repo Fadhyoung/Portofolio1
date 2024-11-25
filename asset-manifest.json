@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/Portofolio1/static/css/main.71903eee.css",
-    "main.js": "/Portofolio1/static/js/main.7e151eaf.js",
+    "main.js": "/Portofolio1/static/js/main.092404a2.js",
     "static/js/453.ed3810f9.chunk.js": "/Portofolio1/static/js/453.ed3810f9.chunk.js",
-    "static/media/fotoSaya.jpg": "/Portofolio1/static/media/fotoSaya.1c73f2d6f25358368b54.jpg",
     "static/media/calibre_bold.woff2": "/Portofolio1/static/media/calibre_bold.00f0959b623a7d9de033.woff2",
     "static/media/calibre_semibold.woff2": "/Portofolio1/static/media/calibre_semibold.36e35ba49d5ae0f003d5.woff2",
     "static/media/calibre_regular.contenthash.fabbf07c.woff2": "/Portofolio1/static/media/calibre_regular.contenthash.96e3b1a24144c297ef23157e8fb82875fabbf07c.870139f4d7e4186bdf55.woff2",
@@ -25,11 +24,11 @@
     "static/media/html-5-logo.svg": "/Portofolio1/static/media/html-5-logo.0520c57181e2ed9214b151582270b7e6.svg",
     "static/media/material-symbols--flutter.svg": "/Portofolio1/static/media/material-symbols--flutter.3c02568ccab0875fe644eaeadab1f357.svg",
     "main.71903eee.css.map": "/Portofolio1/static/css/main.71903eee.css.map",
-    "main.7e151eaf.js.map": "/Portofolio1/static/js/main.7e151eaf.js.map",
+    "main.092404a2.js.map": "/Portofolio1/static/js/main.092404a2.js.map",
     "453.ed3810f9.chunk.js.map": "/Portofolio1/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.71903eee.css",
-    "static/js/main.7e151eaf.js"
+    "static/js/main.092404a2.js"
   ]
 }
