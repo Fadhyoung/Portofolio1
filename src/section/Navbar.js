@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'; // Import useState hook
+import React, { useContext } from 'react'; // Import useState hook
 import 'react-dropdown/style.css'; // Don't forget to import the styles for the Dropdown
 import GetLogoImg from "../img/FullLogoFadhli.png";
 
@@ -9,9 +9,6 @@ function Navbar1({onSectionClick}) {
 
     const { theme, toggleTheme } = useContext(ThemeContext)
     const { toggleLanguage } = useContext(LanguageContext);
-
-    const options = ['About Me', 'Download My Resume', 'Personal Activity', 'My Personality'];
-    const defaultOption = options[0];
 
     return (
         <>

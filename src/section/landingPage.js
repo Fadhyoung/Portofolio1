@@ -17,7 +17,7 @@ function LandingPage({onSectionClick}) {
           hover:bg-sky-500 hover:text-white transition-transform duration-300 hover:scale-90`}>
             <div className='w-3/4 flex items-center justify-center text-sky group-hover:text-white'>{Icon}</div>
             <div className='flex flex-col items-center'>
-                <h4 className='flex items-center justify-center font-bold amber-text-${theme} group-hover:text-amber-500'>{Title}</h4>
+                <h4 className={`flex items-center justify-center font-bold amber-text-${theme} group-hover:text-amber-500`}>{Title}</h4>
                 <p className='text-xs font-thin'>{Glimpse}</p>
             </div>
           </div>

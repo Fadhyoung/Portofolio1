@@ -1,6 +1,5 @@
 import { useContext } from "react"
 import { ThemeContext } from "../Theme"
-import { downloadFile } from "./download";
 import Modal from "./Modal";
 import { useState } from "react";
 import AutoScroll from "./AutoScroll";
