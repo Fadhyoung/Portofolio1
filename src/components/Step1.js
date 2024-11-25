@@ -1,5 +1,3 @@
-import { handleNext, handlePrevious} from "./AboutMe1"
-
 import { ThemeContext } from "../Theme";
 import { useContext } from "react";
 

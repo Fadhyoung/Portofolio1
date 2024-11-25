@@ -1,15 +1,11 @@
 import React from "react";
-import { useContext } from "react";
-import { ThemeContext } from "../Theme";
 
 // IMPLEMENTED IN CONTENT GALLERY
 export const Card1 = ({img, title, description, link, technology, attribute}) => {
 
-    const { theme } = useContext(ThemeContext)
-
     return (
         <>
-            <a href={link} target="_blank" className="w-full xs:h-96 lg:h-96 group relative block overflow-hidden">
+            <a className="w-full xs:h-96 lg:h-96 group relative block overflow-hidden" href={link} target="_blank" rel="noreferrer">
                 <span className="absolute inset-0 border-2 rounded-3xl border-dashed border-blue-950"></span>
 
                 <div className={`p-0.5 h-full w-full grid grid-rows-3 transform items-start rounded-3xl
@@ -93,7 +89,7 @@ export const Card2 = ({content}) => {
 
                         {/** Section-4 link section */}
                         <div className='w-full flex justify-center py-11 bg-gradient-to-r from-cyan-500 to-blue-500 border-y-2 border-sky-500'>                        
-                            <a className="cursor-pointer" href={content.Link} target="_blank">
+                            <a className="cursor-pointer" href={content.Link} target="_blank" rel="noreferrer">
                                 <div className='group bg-white p-4 rounded-md drop-shadow-md hover:bg-blue-950 hover:text-amber-500'>
                                     <svg className='size-6' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
@@ -142,10 +138,6 @@ export const Card2 = ({content}) => {
 
 export const Card3 = ({content}) => {
 
-    const RADIAL_BG = {
-        background: 'radial-gradient(rgb(14 165 233), rgb(23 37 84))'
-    }
-
     const DOPE_SHADOW = {
         filter: 'drop-shadow(2px 2px 5px rgb(0 0 0 / 1))'
     }
@@ -158,20 +150,20 @@ export const Card3 = ({content}) => {
                 <div className="w-full h-full absolute -z-10 rounded-lg">
                     <div className="w-full h-full absolute rounded-md bg-gradient-to-t from-blue-950 to-transparent"></div>
                     <div className="w-full h-full absolute rounded-lg opacity-50 bg-gradient-to-t from-blue-950 to-transparent"></div>
-                    <img className="object-cover object-top self-center rounded-lg w-full h-full" src={`${process.env.PUBLIC_URL}${content.home_img}`} />
+                    <img className="object-cover object-top self-center rounded-lg w-full h-full" src={`${process.env.PUBLIC_URL}${content.home_img}`} alt="home_img"/>
                 </div>
                 {/** FLOATING DESC */}
                 <div className="w-full lg:h-1/2 xs:h-4/6 px-3 absolute flex-shrink-0 bottom-0 grid grid-cols-4 place-content-stretch items-stretch">
                     {/** IMG SIDE */}
                     <div className="w-full h-56 p-5 xl:flex xs:hidden justify-center">
-                        <img className="object-cover object-center rounded-lg w-11/12 h-full" src={`${process.env.PUBLIC_URL}${content.cover_img}`} />
+                        <img className="object-cover object-center rounded-lg w-11/12 h-full" src={`${process.env.PUBLIC_URL}${content.cover_img}`} alt="content_cover_img"/>
                     </div>
                     {/** DESC SIDE */}
                     <div className="py-5 xl:col-span-3 xs:col-span-4 flex flex-col justify-between lg:gap-2 xs:gap-0">
                         <div className="flex items-start">
                             <h1 className="lg:text-3xl xs:text-lg font-bold text-white drop-shadow-lg">{content.Title}</h1>
                             {/** FLOATING LINK */}
-                            <a className="ml-4 text-white hover:scale-110 transition-transform hover:cursor-pointer" href={content.Link} target="_blank">
+                            <a className="ml-4 text-white hover:scale-110 transition-transform hover:cursor-pointer" href={content.Link} target="_blank" rel="noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                 </svg>

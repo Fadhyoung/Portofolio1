@@ -20,7 +20,7 @@ export const Banner1 = ({FirstTitle, SecondTitle, Desc, ButtonT, onSectionClick}
 
                 {/** BG IMAGE */}
                 <div className="h-full relative top-0 left-0 z-10">
-                    <img className="object-cover h-full" style={{ objectPosition: "20% center" }}  src={`${process.env.PUBLIC_URL}/img/Banner1_bg.png`} />
+                    <img className="object-cover h-full" style={{ objectPosition: "20% center" }} src={`${process.env.PUBLIC_URL}/img/Banner1_bg.png`} alt="Banner1_bg"/>
                 </div>
 
                 {/** FLYING CONTENT */}
@@ -77,10 +77,6 @@ export const Banner2 = () => {
 
 export const Banner3 = ({FirstTitle, SecondTitle, Desc, ButtonT}) => {
 
-    const handleDownload = () => {
-        downloadFile('files/FadhliNurHimawan-resume.pdf', 'FadhliNurHimawan-resume.pdf');
-    };
-
     const[isOpen, setIsOpen] = useState(false)
 
     return (
@@ -130,10 +126,6 @@ export const Banner4 =  ({FirstTitle, SecondTitle, Desc, ButtonT, onSectionClick
 
     const { theme } = useContext(ThemeContext)
 
-    const CARD_SHAPE = {
-        border : "1 px "
-    }
-
     const BLANK_BORDER_R = {
         mask: "linear-gradient(to top right, black, transparent 20%, transparent 80%, black)",
         WebkitMask: "linear-gradient(to top right, black, transparent 20%, transparent 80%, black)"
@@ -150,7 +142,7 @@ export const Banner4 =  ({FirstTitle, SecondTitle, Desc, ButtonT, onSectionClick
             {/** LEFT SIDE */}
             <div className="lg:block xs:hidden border-2 border-amber-500" style={{ gridArea: "blank", ...BLANK_BORDER_L }}></div>
             <div className={`p-1 flex custom-box b3card-${theme} border-sky`} style={{ gridArea: "photo", 'background-image': "radial-gradient(var(--sky), var(--blue))" }}>
-                <img className="w-full h-auto mt-10 object-cover" src={`${process.env.PUBLIC_URL}/img/mr_fadhli.png`} />
+                <img className="w-full h-auto mt-10 object-cover" src={`${process.env.PUBLIC_URL}/img/mr_fadhli.png`} alt="mr_fadhli.png"/>
             </div>
             <div className={`p-4 flex flex-col gap-3 justify-center items-center custom-box bg-blue border-red`} style={{ gridArea: "figma" }}>
                 <div><h1 className="text-xl font-bold text-amber-600">Pleased to share how i built this web</h1></div>

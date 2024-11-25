@@ -1,25 +1,20 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Divider1 from '../components/Divider1';
-import Card2 , {Card3} from '../components/Cards';
+import {Card3} from '../components/Cards';
 
 import { LanguageContext } from '../LanguageContext';
 
 function PriorCard() {
 
-  const { language, languageData, toggleLanguage } = useContext(LanguageContext);  
+  const { languageData } = useContext(LanguageContext);  
 
   // const Projcet = languageData.Project.filter((data) => data.Rate === 'A' && data.Category == "Web");
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPost, setCurrentPost] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1)
-  const [postsPerPage, setPostsPerPage] = useState(3);
+  const [postsPerPage] = useState(3);
   const [transition, setTransition] = useState(false);
-
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
   console.log("post : ", posts, "current post: ", currentPost)
 
@@ -86,7 +81,7 @@ function PriorCard() {
                     .map((data, index) => (
                       <button className='w-full h-full hover:scale-105 transition-transform' style={DOPE_SHADOW} onClick={() => {handlePost(index);}}>
                         <div className="w-full lg:h-32  xs:h-20">
-                          <img className="w-full h-full object-cover object-center  border-2 rounded-lg border-amber-500" src={`${process.env.PUBLIC_URL}${data.cover_img}`} />
+                          <img className="w-full h-full object-cover object-center  border-2 rounded-lg border-amber-500" src={`${process.env.PUBLIC_URL}${data.cover_img}`} alt='content_cover_img' />
                         </div>
                       </button>
                     ))}

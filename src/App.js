@@ -5,8 +5,7 @@ import LandingPage from './section/landingPage';
 import Navbar1 from './section/Navbar';
 import Introduction from './section/Introduction';
 import PriorCard from './section/PriorCard';
-import Pagination1 from './components/Pagination1';
-import Banner1, { Banner2, Banner3, Banner4 } from './components/Banners';
+import { Banner2, Banner3, Banner4 } from './components/Banners';
 import ContentGallery from './section/ContentGallery';
 import Footer from './section/Footer';
 

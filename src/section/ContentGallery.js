@@ -1,21 +1,19 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { Card1 } from "../components/Cards";
-import Divider1, { Divider2 } from '../components/Divider1';
+import { Divider2 } from '../components/Divider1';
 
 import { LanguageContext } from "../LanguageContext";
-import { ThemeContext } from "../Theme";
 
 function ContentGallery({Category}) {
 
-    const { language, languageData } = useContext(LanguageContext);
-    const { theme } = useContext(ThemeContext)
+    const { languageData } = useContext(LanguageContext);
     
 
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(4);
+    const [postsPerPage] = useState(4);
     const [transition, setTransition] = useState('translateX(0)');
 
     const WebProjcetLength = posts.length
@@ -26,7 +24,7 @@ function ContentGallery({Category}) {
         const WebProjcet = languageData.Project.filter((data) => data.Category === Category);
         setPosts(WebProjcet); // Use the imported JSON data
         setLoading(false);
-      }, [languageData]);
+      }, [languageData, Category]);
 
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -44,6 +42,10 @@ function ContentGallery({Category}) {
             setTransition('translateX(0)');
         }, 400);
     };
+
+    if(loading) {
+        return(<div>loading...</div>)
+    }
     
 
     return (

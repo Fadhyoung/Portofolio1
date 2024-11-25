@@ -2,13 +2,12 @@ import React, { useContext, useState } from 'react';
 import './tailwind.css';
 import '../output.css';
 import Modal from '../components/Modal';
-import GetCoverPersonImage from "../img/fotoSaya.jpg";
 
 import { ThemeContext } from '../Theme';
 
 function LandingPage({onSectionClick}) {
 
-    const{ theme, toggleTheme } = useContext(ThemeContext)
+    const{ theme } = useContext(ThemeContext)
     const[isOpen, setIsOpen] = useState(false)
 
     const SurroundCard = ({ Title, Glimpse, Icon }) => {
@@ -18,7 +17,7 @@ function LandingPage({onSectionClick}) {
           hover:bg-sky-500 hover:text-white transition-transform duration-300 hover:scale-90`}>
             <div className='w-3/4 flex items-center justify-center text-sky group-hover:text-white'>{Icon}</div>
             <div className='flex flex-col items-center'>
-                <h4 className='flex items-center justify-cente font-bold amber-text-${theme} group-hover:text-amber-500'>{Title}</h4>
+                <h4 className='flex items-center justify-center font-bold amber-text-${theme} group-hover:text-amber-500'>{Title}</h4>
                 <p className='text-xs font-thin'>{Glimpse}</p>
             </div>
           </div>
@@ -47,13 +46,13 @@ function LandingPage({onSectionClick}) {
                 <h1>All of sudden interested? go contact me down below!</h1>
                 <ul className='flex flex-col gap-2'>
                     <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 hover:drop-shadow'>
-                        <a className='w-full h-full' href='https://wa.me/0881026817103' target='_blank'>fadhlinurhimawan@gmail.com</a></li>
+                        <a className='w-full h-full' href='https://wa.me/0881026817103' target='_blank' rel="noreferrer">fadhlinurhimawan@gmail.com</a></li>
                     <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 hover:drop-shadow'>
-                        <a className='w-full h-full' href='https://wa.me/0881026817103' target='_blank'>Whatsapp</a></li>
+                        <a className='w-full h-full' href='https://wa.me/0881026817103' target='_blank' rel="noreferrer">Whatsapp</a></li>
                         <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 hover:drop-shadow'>
-                        <a className='w-full h-full' href='https://github.com/Fadhyoung' target='_blank'>github</a></li>
+                        <a className='w-full h-full' href='https://github.com/Fadhyoung' target='_blank' rel="noreferrer">github</a></li>
                         <li className='p-2 flex cursor-pointer rounded border-y border-gray-200 hover:drop-shadow'>
-                        <a className='w-full h-full' href='https://www.linkedin.com/in/fadhli-nur-himawan-0b70b8246/' target='_blank'>linkedin</a></li>
+                        <a className='w-full h-full' href='https://www.linkedin.com/in/fadhli-nur-himawan-0b70b8246/' target='_blank' rel="noreferrer">linkedin</a></li>
                 </ul>
             </div>
         

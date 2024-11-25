@@ -13,7 +13,7 @@ function Footer () {
                 </p>
 
                 <a
-                    href="#"
+                    href="https://github.com/Fadhyoung"
                     className="mt-8 inline-block rounded-full border border-sky-500 px-12 py-3 text-sm font-medium text-sky-500 hover:bg-sky-500 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
                 >
                     CONTECT ME
@@ -25,7 +25,7 @@ function Footer () {
                 >
                 <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
                     <li>
-                    <a href="#" className="text-amber-500 transition hover:opacity-75"> 2024 @ Fadhli Nur Himawan</a>
+                    <a href="https://github.com/Fadhyoung" className="text-amber-500 transition hover:opacity-75"> 2024 @ Fadhli Nur Himawan</a>
                     </li>
                 </ul>
 
@@ -33,7 +33,7 @@ function Footer () {
 
                     <li>
                     <a
-                        href="#"
+                        href="https://github.com/Fadhyoung"
                         rel="noreferrer"
                         target="_blank"
                         className="text-amber-500 transition hover:opacity-75"
@@ -52,7 +52,7 @@ function Footer () {
 
                     <li>
                     <a
-                        href="#"
+                        href="https://github.com/Fadhyoung"
                         rel="noreferrer"
                         target="_blank"
                         className="text-amber-500 transition hover:opacity-75"
@@ -69,7 +69,7 @@ function Footer () {
 
                     <li>
                     <a
-                        href="#"
+                        href="https://github.com/Fadhyoung"
                         rel="noreferrer"
                         target="_blank"
                         className="text-amber-500 transition hover:opacity-75"

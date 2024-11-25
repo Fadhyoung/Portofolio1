@@ -1,9 +1,7 @@
 import React, { useContext, useState } from 'react'; // Import useState hook
-import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'; // Don't forget to import the styles for the Dropdown
 import GetLogoImg from "../img/FullLogoFadhli.png";
 
-import { downloadFile } from '../components/download';
 import { ThemeContext } from '../Theme';
 import { LanguageContext } from '../LanguageContext';
 
@@ -14,15 +12,6 @@ function Navbar1({onSectionClick}) {
 
     const options = ['About Me', 'Download My Resume', 'Personal Activity', 'My Personality'];
     const defaultOption = options[0];
-
-    // State to manage selected option
-    const [selectedOption, setSelectedOption] = useState(defaultOption);
-
-    // Handle selection change
-    const _onSelect = (option) => {
-        console.log("Selected option:", option); // Log the selected option
-        setSelectedOption(option.value); // Update the state with the selected option value
-    };
 
     return (
         <>
@@ -42,7 +31,7 @@ function Navbar1({onSectionClick}) {
                             placeholder="Select an option"
                         /></div>
                     */}
-                    <div className='px-3 py-1 rounded text-white bg-blue-950 hover:scale-150 duration-300'><a href='https://github.com/Fadhyoung' target='_blank'>Github</a></div> 
+                    <div className='px-3 py-1 rounded text-white bg-blue-950 hover:scale-150 duration-300'><a href='https://github.com/Fadhyoung' target='_blank' rel="noreferrer">Github</a></div> 
                 </div>
                 <div className='flex gap-8'>
                     {/** TOGGLE LANGUAGE */}
