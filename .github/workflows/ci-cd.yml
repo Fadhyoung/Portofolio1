@@ -22,21 +22,20 @@ jobs:
         with:
           name: production-files
           path: ./build
-
-# Deploy Job
-deploy:
-  # Add a dependency to the build job
-  needs: build
-  # Specify runner + deployment step
-  runs-on: ubuntu-latest
-  steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: production-files
-        path: ./build
-    - name: Deploy to GitHub Portofolio1 Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.PORTOFOLIO1_SECRET }}
-        publish_dir: ./build
+  # Deploy Job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: production-files
+          path: ./build
+      - name: Deploy to GitHub Portofolio1 Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PORTOFOLIO1_SECRET }}
+          publish_dir: ./build
