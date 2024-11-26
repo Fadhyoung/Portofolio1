@@ -118,35 +118,5 @@
             "Institution": "Daffodils English Course",
             "Major": "Kursus Berbicara Bahasa Inggris"
         }
-    ],
-
-    "About_me" : {
-        "name": "Fadhli Nur Himawan",
-        "age": "22 y.o",
-        "TTL": "Wonogiri, 11 Maret 2002",
-        "description": "Bersemangat dalam pengembangan aplikasi dan kecerdasan buatan. Terampil dalam mengembangkan aplikasi web utama, dengan fokus pada pembuatan halaman depan yang interaktif dan menarik secara visual, serta menangani proses backend yang bersifat komputasional. Konsumen bahasa Inggris sehari-hari, terus berusaha untuk tetap mengikuti berita dan tren global. Memiliki antusiasme tinggi terhadap kecerdasan buatan.",
-        "img": "/img/fotoSaya.jpg"
-    },
-
-    "Social_Media": [
-    {
-        "socmed": "Linkedin",
-        "description": "Tempat yang fungsional untuk mendapatkan pekerjaan dan menghasilkan uang",
-        "link": "https://www.linkedin.com/in/fadhli-nur-himawan-0b70b8246/",
-        "img": "/img/linkedin.png"
-    },
-    {
-        "socmed": "Youtube",
-        "description": "Berikan like dan tonton video YouTube saya untuk menambah wawasan bagi Anda yang saya sayangi",
-        "link": "https://www.youtube.com/@fadhlinur8463",
-        "img": "/img/youtube.png"
-    },
-    {
-        "socmed": "Twitter",
-        "description": "Selalu senang mengikuti apa yang sedang terjadi di negara tercinta kita, Indonesia",
-        "link": "https://twitter.com/FadhliNur7",
-        "img": "/img/x.png"
-    }
     ]
-
 }
