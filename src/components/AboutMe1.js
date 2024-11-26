@@ -57,7 +57,7 @@ const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
                 {/** LINK TO SOCIAL MEDIA */}
                 {/** LABEL 1 */}
                 { socmed_data.map((item, index) => (
-                    <a className="w-full p-1 h-full cursor-pointer rounded-lg bg-blue-950 transition-all hover:scale-95" href={item.link} target="_blank" rel={"noreferer"}>
+                    <a className="w-full p-1 h-full cursor-pointer rounded-lg bg-blue-950 transition-all hover:scale-95" href={item.link} target="_blank" rel="noreferrer">
                         <div className="w-full h-full grid grid-cols-3">
                             <div className="ml-4 self-center text-4xl font-semibold z-10 text-white">{item.socmed}</div>
                             <div className="col-span-2 relative rounded-md overflow-hidden">
