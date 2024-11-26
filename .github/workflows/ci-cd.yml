@@ -1,12 +1,10 @@
-name: DevOps-GitHibActions
+name: Develop-GitHibActions
 on: push
 jobs:
   # Build Job
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: echo "Hello World!"
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Install Node
