@@ -1,4 +1,4 @@
-name: Develop-GitHibActions
+name: DevOps-GitHibActions
 on: push
 jobs:
   # Build Job
