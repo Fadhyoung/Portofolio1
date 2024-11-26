@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portofolio1/static/css/main.39cdf3c5.css",
-    "main.js": "/Portofolio1/static/js/main.f371ad4d.js",
+    "main.js": "/Portofolio1/static/js/main.3271dc94.js",
     "static/js/453.ed3810f9.chunk.js": "/Portofolio1/static/js/453.ed3810f9.chunk.js",
     "static/media/calibre_bold.woff2": "/Portofolio1/static/media/calibre_bold.00f0959b623a7d9de033.woff2",
     "static/media/calibre_semibold.woff2": "/Portofolio1/static/media/calibre_semibold.36e35ba49d5ae0f003d5.woff2",
@@ -24,11 +24,11 @@
     "static/media/html-5-logo.svg": "/Portofolio1/static/media/html-5-logo.0520c57181e2ed9214b151582270b7e6.svg",
     "static/media/material-symbols--flutter.svg": "/Portofolio1/static/media/material-symbols--flutter.3c02568ccab0875fe644eaeadab1f357.svg",
     "main.39cdf3c5.css.map": "/Portofolio1/static/css/main.39cdf3c5.css.map",
-    "main.f371ad4d.js.map": "/Portofolio1/static/js/main.f371ad4d.js.map",
+    "main.3271dc94.js.map": "/Portofolio1/static/js/main.3271dc94.js.map",
     "453.ed3810f9.chunk.js.map": "/Portofolio1/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39cdf3c5.css",
-    "static/js/main.f371ad4d.js"
+    "static/js/main.3271dc94.js"
   ]
 }
