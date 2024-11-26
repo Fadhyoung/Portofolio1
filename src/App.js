@@ -71,7 +71,7 @@ function App() {
 
   return (
     <>
-      
+      <div className={`w-full ${theme}`}>
       <div className={`${theme} lg:w-full xs:w-fit max-w-[2024px] m-auto grid grid-cols-1 font-calibre`}>
 
         {/** TOP BACKGROUND */}
@@ -92,11 +92,11 @@ function App() {
         </div>
 
         {/** TRANSITION BACKGROUND */}
-        <div className='w-full h-full pb-16 mt-20 gradient-tb-2c'>
+        <div className='w-full h-full pb-16 lg:mt-20 xs:mt-10 gradient-tb-2c'>
           
           <div className='m-auto lg:w-3/4 xs:w-11/12 ' ref={sectionRefs.priorCard}><PriorCard /></div>
           
-          <div className='lg:w-3/4 xs:w-11/12 mx-auto my-28'>
+          <div className='lg:w-3/4 xs:w-11/12 mx-auto lg:my-28 xs:my-16'>
             <Banner4 
               FirstTitle={"What do you think about my portofolio?"}
               SecondTitle={"Roll down please"}
@@ -109,7 +109,7 @@ function App() {
         </div>         
 
         {/** BOTTOM BACKGOUND */}
-        <div className={`w-full h-full pt-36 -mt-24 flex flex-col gap-10 lg:rounded-[6rem] xs:rounded-[3rem] ${theme}`}>
+        <div className={`w-full h-full lg:pt-36 xs:pt-20 -mt-24 flex flex-col gap-10 lg:rounded-[6rem] xs:rounded-[3rem] ${theme}`}>
           
           <div className='w-full' ref={sectionRefs.allProjects}><ContentGallery Category={"Web"} /></div>
 
@@ -132,7 +132,7 @@ function App() {
         </div>        
 
       </div>
-      
+      </div>      
 
     </>
       

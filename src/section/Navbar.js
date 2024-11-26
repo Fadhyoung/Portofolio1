@@ -12,7 +12,7 @@ function Navbar1({onSectionClick}) {
 
     return (
         <>
-            <nav className={`w-full px-20 flex flex-row justify-between items-center top-0 z-50 ${theme}`}>
+            <nav className={`w-full lg:px-20 xs:px-16 flex flex-row justify-between items-center top-0 z-50 ${theme}`}>
                 <div className={`w-20 m-2 p-2 box-border rounded bg-white`}>
                     <img src={GetLogoImg} alt="Logo" />
                 </div>
@@ -30,7 +30,7 @@ function Navbar1({onSectionClick}) {
                     */}
                     <div className='px-3 py-1 rounded text-white bg-blue-950 hover:scale-150 duration-300'><a href='https://github.com/Fadhyoung' target='_blank' rel="noreferrer">Github</a></div> 
                 </div>
-                <div className='flex gap-8'>
+                <div className='flex justify-end lg:gap-8 xs:gap-3'>
                     {/** TOGGLE LANGUAGE */}
                     <button className={`${language === "en" ? "text-amber-500" : "text-sky"}`} onClick={toggleLanguage}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">

@@ -17,7 +17,8 @@ module.exports = {
         },
       },
       screens: {
-        'xs': '280px', // Custom breakpoint for iPhone 13
+        'xs': '320px', // Custom breakpoint for iPhone 13
+        '2xs': '240px'
       },
       fontFamily: {
         calibre: ['Calibre', 'sans-serif'],
