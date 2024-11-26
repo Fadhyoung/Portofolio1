@@ -14,7 +14,7 @@ function LandingPage({onSectionClick}) {
         return (
           <div className={` group
           lg:w-28 md:w-28 xs:w-24 h-32 p-3 grid grid-rows-2 place-content-center place-items-center text-center border rounded scard-${theme}
-          hover:bg-sky-500 hover:text-white transition-transform duration-300 hover:scale-90`}>
+          hover:bg-sky hover:text-white transition-transform duration-300 hover:scale-90`}>
             <div className='w-3/4 flex items-center justify-center text-sky group-hover:text-white'>{Icon}</div>
             <div className='flex flex-col items-center'>
                 <h4 className={`flex items-center justify-center font-bold amber-text-${theme} group-hover:text-amber-500`}>{Title}</h4>
@@ -127,7 +127,7 @@ function LandingPage({onSectionClick}) {
             </div>
 
                 {/** SCROLL DOWN */}
-                <button className='w-40 p-3 absolute lg:-bottom-10 lg:right-10 xs:m-auto sm:-bottom-20 xs:-bottom-20 flex gap-3 items-center animate-bounce border rounded-full bg-sky-500 '
+                <button className='w-40 p-3 absolute lg:-bottom-10 lg:right-10 xs:m-auto sm:-bottom-20 xs:-bottom-20 flex gap-3 items-center animate-bounce border rounded-full text-white bg-sky '
                         onClick={() => onSectionClick('introduction')}
                 >
                     <svg className="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >

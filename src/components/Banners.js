@@ -91,7 +91,7 @@ export const Banner3 = ({FirstTitle, SecondTitle, Desc, ButtonT}) => {
                         <div className="mx-auto h-auto max-w-3xl text-center">
                             <div
                                 className="lg:text-3xl xs:text-2xl font-extrabold text-transparent 
-                                bg-clip-text bg-gradient-to-r from-blue-950 to-red-500 "
+                                bg-clip-text bg-gradient-to-r from-sky-700 to-red-500 "
                             >
                                 {FirstTitle}
                                 <span className="sm:block"> {SecondTitle} </span>
@@ -104,7 +104,7 @@ export const Banner3 = ({FirstTitle, SecondTitle, Desc, ButtonT}) => {
                         <div className="mt-8 flex flex-wrap justify-center gap-4 ">
                             <button
                             className="block lg:w-1/5 rounded-full border px-12 py-3 text-sm font-medium text-white 
-                          border-amber-500 bg-sky-500
+                          border-amber-500 bg-sky
                             hover:bg-transparent hover:text-red-500 focus:outline-none focus:ring active:text-opacity-75 sm:w-auto 
                             xs:w-full"
                             onClick={() => {setIsOpen(true);}}
@@ -146,7 +146,7 @@ export const Banner4 =  ({FirstTitle, SecondTitle, Desc, ButtonT, onSectionClick
             <div className={`p-4 flex flex-col gap-3 justify-center items-center custom-box bg-blue border-red`} style={{ gridArea: "figma" }}>
                 <div><h1 className="text-xl font-bold text-amber-600">Pleased to share how i built this web</h1></div>
                 <div className=" flex items-center gap-5 justify-between">
-                    <button className="w-2/5 h-full p-2 text-xl font-semibold rounded-xl text-white bg-sky">FIGMA</button>
+                    <a className="w-2/5 h-full p-2 text-xl text-center font-semibold rounded-xl text-white bg-sky hover:scale-110 transition-all duration-100" href="https://www.figma.com/design/M3Veg10GnvPilUOQjCIAaA/Portofolio-UI-Concept-(Night)?node-id=0-1&t=vpsrGLDupodVBLRL-1" target="_blank" rel="noreferrer">FIGMA</a>
                     <p className="text-sm text-white">I know there's some of unfinished thing. but everything is still in development and will be always developed.</p>
                 </div>
             </div>

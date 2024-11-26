@@ -5,27 +5,27 @@ function Footer () {
             <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
                 <div className="text-center">
                 <h2 className="text-3xl font-extrabold text-transparent
-                bg-gradient-to-r from-sky-500 to-red-500 bg-clip-text 
+                bg-gradient-to-r from-sky-700 to-red-500 bg-clip-text 
                 sm:text-5xl">Thank you for visitiong my portofolio website</h2>
 
-                <p className="mx-auto mt-4 max-w-sm text-gray-500">
+                <p className="mx-auto mt-4 max-w-sm text-white">
                     If you are interested in my works, contact me now by clicking the button below
                 </p>
 
                 <a
                     href="https://github.com/Fadhyoung"
-                    className="mt-8 inline-block rounded-full border border-sky-500 px-12 py-3 text-sm font-medium text-sky-500 hover:bg-sky-500 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+                    className="mt-8 inline-block rounded-full border border-sky px-12 py-3 text-sm font-medium text-sky hover:bg-sky hover:text-white"
                 >
                     CONTECT ME
                 </a>
                 </div>
 
                 <div
-                className="mt-16 border-t border-amber-500 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24"
+                className="mt-16 border-t border-white pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24 text-white"
                 >
                 <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
                     <li>
-                    <a href="https://github.com/Fadhyoung" className="text-amber-500 transition hover:opacity-75"> 2024 @ Fadhli Nur Himawan</a>
+                    <a href="https://github.com/Fadhyoung" className="transition hover:opacity-75"> 2024 @ Fadhli Nur Himawan</a>
                     </li>
                 </ul>
 
@@ -36,7 +36,7 @@ function Footer () {
                         href="https://github.com/Fadhyoung"
                         rel="noreferrer"
                         target="_blank"
-                        className="text-amber-500 transition hover:opacity-75"
+                        className="transition hover:opacity-75"
                     >
                         <span className="sr-only">Instagram</span>
 
@@ -55,7 +55,7 @@ function Footer () {
                         href="https://github.com/Fadhyoung"
                         rel="noreferrer"
                         target="_blank"
-                        className="text-amber-500 transition hover:opacity-75"
+                        className="transition hover:opacity-75"
                     >
                         <span className="sr-only">Twitter</span>
 
@@ -72,7 +72,7 @@ function Footer () {
                         href="https://github.com/Fadhyoung"
                         rel="noreferrer"
                         target="_blank"
-                        className="text-amber-500 transition hover:opacity-75"
+                        className="transition hover:opacity-75"
                     >
                         <span className="sr-only">GitHub</span>
 

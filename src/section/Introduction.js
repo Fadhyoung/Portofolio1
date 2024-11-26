@@ -1,8 +1,8 @@
 import Step1 from "../components/Step1";
 import AboutMe from "../components/AboutMe1";
-import { useState } from "react";
+import { useState} from "react";
 
-function Introduction() {
+function Introduction() {    
 
     const [Progress, SetProgress] = useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,7 +38,7 @@ function Introduction() {
       <>
         
         <dv className=" w-full flex flex-col items-center gap-6">
-        <AboutMe currentSlide={currentSlide} handlePrevious={handlePrevious} handleNext={handleNext} />
+      <AboutMe currentSlide={currentSlide} handlePrevious={handlePrevious} handleNext={handleNext}/>
 
         <div className="lg:w-3/4 xs:w-5/6">
           <Step1 progress={Progress} currentSlide={currentSlide} goToSlide={goToSlide}  />
