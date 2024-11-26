@@ -1,114 +1,127 @@
 import Icon from "../icons/icons";
 import { icons } from "../icons/icons";
 
+import { useState, useContext, useEffect } from "react";
+
 import Content from "../Content.json"
 import { ThemeContext } from "../Theme";
-import { useContext } from "react";
+import { LanguageContext } from "../LanguageContext";
 
 const AboutMe = ({ handlePrevious, handleNext, currentSlide}) => {
+
+    const { languageData } = useContext(LanguageContext);
+    const [loading, setLoading] = useState(false);
+    const [personal_data, setPersonal_data] = useState({});
+    const [socmed_data, setSocmed_data] = useState([]);
+
+    useEffect(() => {
+      setLoading(true)
+      const personal_data = languageData.About_me
+      setPersonal_data(personal_data) 
+      const socmed_data = languageData.Social_Media
+      setSocmed_data(socmed_data) 
+      setLoading(false)    
+    }, [languageData])
 
     const { theme } = useContext(ThemeContext)
     const skills = Object.keys(icons);
 
-      const slides = [
-        {
-          id: 1,
-          content: (
-            <div className="w-full h-full lg:flex-shrink-0 grid lg:grid-cols-3 lg:grid-rows-none place-content-center lg:gap-6 xs:gap-0
-            xs:w-full lg:GRID_AM_LG xs:GRID_AM_XS">
-                {/** LEFT CONTENT */}
-                <div className="lg:h-72 xs:h-full flex flex-col text-right lg:items-end lg:justify-between xs:items-center" style={{ gridArea: "information"}}>
-                    <div className="w-auto flex flex-col gap-2 lg:items-end xs:items-center">
-                        <h1 className="font-bold text-2xl text-sky-500">FADHLI NUR HIMAWAN</h1>
-                        <div className="flex gap-2 text-xs xs:items-center lg:items-end text-white">
-                            <p className="bg-blue-950 py-1 px-3 rounded ">You can call me <span className="text-amber-500">Hima</span></p>
-                            <div className="flex bg-blue-950 py-1 px-3 rounded"><h1 className="font-bold text-amber-500">22 years old <span className="font-normal text-white"> Wonogiri, 11 March 2002</span></h1></div>
-                        </div>
+    if (loading) {
+        <div>loading</div>
+    }
+
+    
+    const slides = [
+    {
+        id: 1,
+        content: (
+        <div className="w-full h-full lg:flex-shrink-0 grid lg:grid-cols-3 lg:grid-rows-none place-content-center lg:gap-6 xs:gap-0
+        xs:w-full lg:GRID_AM_LG xs:GRID_AM_XS">
+            {/** LEFT CONTENT */}
+            <div className="lg:h-72 xs:h-full flex flex-col text-right lg:items-end lg:justify-between xs:items-center" style={{ gridArea: "information"}}>
+                <div className="w-auto flex flex-col gap-2 lg:items-end xs:items-center">
+                    <h1 className="font-bold text-2xl text-sky-500">{personal_data.name}</h1>
+                    <div className="flex gap-2 text-xs xs:items-center lg:items-end text-white">
+                        <p className="bg-blue-950 py-1 px-3 rounded ">You can call me <span className="text-amber-500">Hima</span></p>
+                        <div className="flex bg-blue-950 py-1 px-3 rounded"><h1 className="font-bold text-amber-500">{personal_data.age} <span className="font-normal text-white">{personal_data.TTL}</span></h1></div>
                     </div>
-                    <p className="lg:p-0 xs:p-3 font-medium text-sm text-justify indent-10">
-                    Passionate about application and AI development. Skilled in developing major web applications, with a focus on creating interactive and visually appealing front-end pages, as well as handling computational back-end processes. A day-to-day English consumer, continuously working to stay updated with global news and trends. A keen enthusiasm for artificial intelligence.
-                    </p>
                 </div>
-                {/** CENTER CONTENT */}
-                <div className="lg:h-72 xs:h-[23rem] w-full lg:p-0 xs:p-2 " style={{ gridArea: "photo"}}>
-                    <img className="object-cover h-full w-full rounded-md" src={`${process.env.PUBLIC_URL}/img/fotoSaya.jpg`} alt="" />
-                </div>
-                {/** RIGHT CONTENT LG */}
-                <div className="h-72 lg:p-0 xs:p-2 xs:hidden lg:grid grid-rows-2 gap-2 text-left items-center justify-items-stretch">
-                    {/** LINK TO SOCIAL MEDIA */}
-                    {/** LABEL 1 */}
-                    <div className="w-full p-1.5 h-full cursor-pointer rounded-lg bg-blue-950
-                        transition-all hover:scale-95 
-                    " >
+                <p className="lg:p-0 xs:p-3 font-medium text-sm text-justify indent-10">{personal_data.description}</p>
+            </div>
+            {/** CENTER CONTENT */}
+            <div className="lg:h-72 xs:h-[23rem] w-full lg:p-0 xs:p-2 " style={{ gridArea: "photo"}}>
+                <img className="object-cover h-full w-full rounded-md" src={`${process.env.PUBLIC_URL}/img/fotoSaya.jpg`} alt="" />
+            </div>
+            {/** RIGHT CONTENT LG */}
+            <div className="h-72 lg:p-0 xs:p-2 xs:hidden lg:grid grid-rows-3 gap-2 text-left items-center justify-items-stretch">
+                {/** LINK TO SOCIAL MEDIA */}
+                {/** LABEL 1 */}
+                { socmed_data.map((item, index) => (
+                    <a className="w-full p-1 h-full cursor-pointer rounded-lg bg-blue-950 transition-all hover:scale-95" href={item.link} target="_blank" rel={"noreferer"}>
                         <div className="w-full h-full grid grid-cols-3">
-                            <div className="ml-4 self-center text-4xl font-semibold z-10 text-white">LINKEDIN</div>
+                            <div className="ml-4 self-center text-4xl font-semibold z-10 text-white">{item.socmed}</div>
                             <div className="col-span-2 relative rounded-md overflow-hidden">
                                 <div className="w-full h-full absolute bg-gradient-to-r from-blue-950 to-sky-500"></div>
-                                <img className="object-cover h-full w-full" src={`${process.env.PUBLIC_URL}/img/linkedin.png`} alt="" />
+                                <img className="object-cover h-full w-full" src={`${process.env.PUBLIC_URL}${item.img}`} alt="" />
                             </div>
                         </div>                        
-                    </div>
-                    {/** LABEL 2 */}
-                    <div className="w-full p-1.5 h-full cursor-pointer rounded-lg bg-blue-950
-                        transition-all hover:scale-95
-                    " >
-                        <div className="w-full h-full grid grid-cols-3">
-                            <div className="ml-4 self-center text-4xl font-semibold z-40 text-white">LINKEDIN</div>
-                            <div className="col-span-2 relative rounded-md overflow-hidden">
-                                <div className="w-full h-full absolute z-10 bg-gradient-to-r from-blue-950 to-sky-500"></div>
-                                <img className="object-cover h-full w-full" src={`${process.env.PUBLIC_URL}/img/linkedin.png`} alt="" />
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
+                    </a>    
+                ))
 
-                {/** RIGHT CONTENT xs */}
-                <div className="w-full h-full p-2 lg:hidden xs:flex gap-5 justify-center items-center text-center">
-                    <div className={`w-full p-1  flex justify-center border rounded-md border-sky ${theme} text-sky`}>
-                        <svg className="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
-                        <h4 className={`flex items-center justify-center font-bold amber-text-${theme} group-hover:text-amber-500`}>LINKEDIN</h4>
-                    </div>
-                    <div className={`w-full p-1  flex justify-center border rounded-md border-sky ${theme} text-sky`}>
-                        <svg className="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"/></svg>
-                        <h4 className={`flex items-center justify-center font-bold amber-text-${theme} group-hover:text-amber-500`}>LINKEDIN</h4>
-                    </div>
-                </div>
-
+                }            
             </div>
-          )
-        },
-        {
-          id: 2,
-          content: (
-            <div className="h-full px-4 col-span-4">
-                <div className="h-full grid lg:grid-cols-4 gap-4 place-content-stretch ">
-                    {
-                        Content.Education.map((education, index) => (
-                            <div key={index} className={`px-4 py-8 flex flex-col justify-center rounded-lg text-center ${theme}`}>
-                                <div className="order-last text-lg font-medium text-amber-500">{education.Major}<br></br></div>
-                                <div className={`text-3xl font-extrabold uppercase ${theme} md:text-5xl`}>{education.Institution}</div>
-                            </div>
-                        ))}
+
+            {/** RIGHT CONTENT xs */}
+            <div className="w-full h-full p-2 lg:hidden xs:flex gap-5 justify-center items-center text-center">
+                <div className={`w-full p-1  flex justify-center border rounded-md border-sky ${theme} text-sky`}>
+                    <svg className="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+                    <h4 className={`flex items-center justify-center font-bold amber-text-${theme} group-hover:text-amber-500`}>LINKEDIN</h4>
+                </div>
+                <div className={`w-full p-1  flex justify-center border rounded-md border-sky ${theme} text-sky`}>
+                    <svg className="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"/></svg>
+                    <h4 className={`flex items-center justify-center font-bold amber-text-${theme} group-hover:text-amber-500`}>YOUTUBE</h4>
+                </div>
+                <div className={`w-full p-1  flex justify-center border rounded-md border-sky ${theme} text-sky`}>
+                <svg className="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor"><path d="M1 2h2.5L3.5 2h-2.5zM5.5 2h2.5L7.2 2h-2.5z"><animate fill="freeze" attributeName="d" dur="0.4s" values="M1 2h2.5L3.5 2h-2.5zM5.5 2h2.5L7.2 2h-2.5z;M1 2h2.5L18.5 22h-2.5zM5.5 2h2.5L23 22h-2.5z"/></path><path d="M3 2h5v0h-5zM16 22h5v0h-5z"><animate fill="freeze" attributeName="d" begin="0.4s" dur="0.4s" values="M3 2h5v0h-5zM16 22h5v0h-5z;M3 2h5v2h-5zM16 22h5v-2h-5z"/></path><path d="M18.5 2h3.5L22 2h-3.5z"><animate fill="freeze" attributeName="d" begin="0.5s" dur="0.4s" values="M18.5 2h3.5L22 2h-3.5z;M18.5 2h3.5L5 22h-3.5z"/></path></g></svg>
+                    <h4 className={`flex items-center justify-center font-bold amber-text-${theme} group-hover:text-amber-500`}>X</h4>
                 </div>
             </div>
-          )
-        },
-        {
-          id: 3,
-          content: (
-            <div className="w-full p-2 col-span-4 grid lg:grid-cols-8 xs:grid-cols-4 gap-8">
+
+        </div>
+        )
+    },
+    {
+        id: 2,
+        content: (
+        <div className="h-full px-4 col-span-4">
+            <div className="h-full grid lg:grid-cols-4 gap-4 place-content-stretch ">
                 {
-                    skills.map((icon, index) => (
-                        <div className={`lg:p-3 xs:p-5 w-full flex flex-col justify-center gap-3 items-center border rounded text-center ${theme} border-${theme}`}>
-                            <div className=" p-3 border rounded-md drop-shadow-md"><Icon icon={icon} /></div>
-                            <h2 className="text-lg font-semibold text-amber-500">{icon}</h2>
+                    Content.Education.map((education, index) => (
+                        <div key={index} className={`px-4 py-8 flex flex-col justify-center rounded-lg text-center ${theme}`}>
+                            <div className="order-last text-lg font-medium text-amber-500">{education.Major}<br></br></div>
+                            <div className={`text-3xl font-extrabold uppercase ${theme} md:text-5xl`}>{education.Institution}</div>
                         </div>
-                    ))
-                }
+                    ))}
             </div>
-          )
-        }
-      ];
+        </div>
+        )
+    },
+    {
+        id: 3,
+        content: (
+        <div className="w-full p-2 col-span-4 grid lg:grid-cols-8 xs:grid-cols-4 gap-8">
+            {
+                skills.map((icon, index) => (
+                    <div className={`lg:p-3 xs:p-5 w-full flex flex-col justify-center gap-3 items-center border rounded text-center ${theme} border-${theme}`}>
+                        <div className=" p-3 border rounded-md drop-shadow-md"><Icon icon={icon} /></div>
+                        <h2 className="text-lg font-semibold text-amber-500">{icon}</h2>
+                    </div>
+                ))
+            }
+        </div>
+        )
+    }
+    ]
 
     return (
         <>

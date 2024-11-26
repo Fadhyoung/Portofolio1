@@ -31,19 +31,21 @@ code {
   --black: rgb(0, 0 ,0)
 }
 
+@layer utilities {
 
+  .bg-sky { background-color: var(--sky); }
+  .bg-sky-half { background-color: rgb(46, 117, 171, 0.25); }
+  .border-sky { border-color: var(--sky) }
+  .text-sky { color: var(--sky)}
 
-.bg-sky { background-color: var(--sky); }
-.bg-sky-half { background-color: rgb(46, 117, 171, 0.25); }
-.border-sky { border : 1px solid var(--sky) }
-.text-sky { color: var(--sky)}
+  .bg-blue { background-color: var(--blue);}
+  .text-blue { color: var(--blue) }
 
-.bg-blue { background-color: var(--blue);}
-.text-blue { color: var(--blue) }
+  .border-red { border : 1px solid var(--red)}
+  .border-blue { border-color: var(--blue)}
+  .border-amber { border-color: var(--amber)}
 
-.border-red { border : 1px solid var(--red)}
-.border-blue { border-color: var(--blue)}
-.border-amber { border-color: var(--amber)}
+}
 
 /* ===== ABOUT ME ===== */
 

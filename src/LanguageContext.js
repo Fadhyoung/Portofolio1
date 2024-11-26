@@ -5,10 +5,12 @@ const LanguageContext = createContext();
 const LanguageProvider = ({ children }) => {
 
     const [language, setLanguage] = useState("en"); // Default to English
-    const [languageData, setLanguageData] = useState({
+    const [languageData, setLanguageData] = useState({ // initiate the object first, before initiate useEffect
         Project: [], // Add the Project array here
         Banner: [],  // Add the Banner array here
-        Education: [] // Add the Education array here
+        Education: [], // Add the Education array here
+        About_me: {}, // Add the aboutme object here
+        Social_Media: [] // Add the social media object here
       });    
 
     const fetchLanguageData = useCallback(() => {
