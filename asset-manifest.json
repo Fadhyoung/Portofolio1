@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portofolio1/static/css/main.6ade42eb.css",
-    "main.js": "/Portofolio1/static/js/main.8b056cf2.js",
+    "main.css": "/Portofolio1/static/css/main.4e69af38.css",
+    "main.js": "/Portofolio1/static/js/main.552d8ec6.js",
     "static/js/453.ed3810f9.chunk.js": "/Portofolio1/static/js/453.ed3810f9.chunk.js",
     "static/media/calibre_bold.woff2": "/Portofolio1/static/media/calibre_bold.00f0959b623a7d9de033.woff2",
     "static/media/calibre_semibold.woff2": "/Portofolio1/static/media/calibre_semibold.36e35ba49d5ae0f003d5.woff2",
@@ -23,12 +23,12 @@
     "static/media/css3.svg": "/Portofolio1/static/media/css3.297582b2ef2a8d5b3bea5f358b0e1979.svg",
     "static/media/html-5-logo.svg": "/Portofolio1/static/media/html-5-logo.0520c57181e2ed9214b151582270b7e6.svg",
     "static/media/material-symbols--flutter.svg": "/Portofolio1/static/media/material-symbols--flutter.3c02568ccab0875fe644eaeadab1f357.svg",
-    "main.6ade42eb.css.map": "/Portofolio1/static/css/main.6ade42eb.css.map",
-    "main.8b056cf2.js.map": "/Portofolio1/static/js/main.8b056cf2.js.map",
+    "main.4e69af38.css.map": "/Portofolio1/static/css/main.4e69af38.css.map",
+    "main.552d8ec6.js.map": "/Portofolio1/static/js/main.552d8ec6.js.map",
     "453.ed3810f9.chunk.js.map": "/Portofolio1/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ade42eb.css",
-    "static/js/main.8b056cf2.js"
+    "static/css/main.4e69af38.css",
+    "static/js/main.552d8ec6.js"
   ]
 }
