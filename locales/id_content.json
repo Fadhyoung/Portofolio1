@@ -37,6 +37,16 @@
             "Attribute": ["Responsif", "Keamanan Ketat", "Penyesuaian API"]
         },
         {
+            "Img": "/img/ARAKIA.png",
+            "Title": "ARAKIA",
+            "Description": "CV Amanah Citra Cendekia (ARAKIA) adalah perusahaan yang bergerak di berbagai lini usaha strategis, yaitu konsultansi, telekomunikasi, agribisnis, jasa konstruksi, dan perdagangan bebas",
+            "Link": "https://fadhyoung.github.io/arakia/",
+            "Category": "Web",
+            "Rate": "B",
+            "Technology": ["React js", "Tailwind"],
+            "Attribute": ["Desain Tata Letak Tinggi", "UI yang Efektif"]
+        },        
+        {
             "Img": "/img/Pahe.png",
             "Title": "FCLONE - Proyek Kloning PAHE 2023",
             "Description": "Fclone adalah proyek pribadi saya yang berfokus pada kloning tampilan aplikasi web tertentu, lalu menyesuaikannya agar lebih khas sesuai preferensi saya.",

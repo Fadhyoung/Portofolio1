@@ -37,6 +37,16 @@
             "Attribute" : ["Responsive", "Strict Security", "API Adjustmen"]
         },
         {
+            "Img" : "/img/ARAKIA.png",
+            "Title" : "ARAKIA",
+            "Description" : "CV Amanah Citra Cendekia (ARAKIA) is a company engaged in various strategic business sectors, including consulting, telecommunications, agribusiness, construction services, and free trade",
+            "Link" : "https://fadhyoung.github.io/arakia/",
+            "Category": "Web",
+            "Rate" : "B",
+            "Technology" : ["React js", "Tailwind"],
+            "Attribute" : ["High Layout Design", "Effective UI"]
+        },
+        {
             "Img" : "/img/Pahe.png",
             "Title" : "FCLONE - PAHE Clone Project 2023",
             "Description" : "Fclone is my personal project that focuses on cloning the appearance of certain web apps and then adjusting them to make them more distinct based on my preferences.",
@@ -85,7 +95,7 @@
             "Rate" : "A",
             "Technology" : ["Figma", "Adobe Illustrator"],
             "Attribute" : ["High Layout Design", "Effective UI"]
-        }
+        }        
     ],
 
     "Banner" : [
