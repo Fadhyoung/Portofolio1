@@ -6,7 +6,7 @@ function Footer () {
                 <div className="text-center">
                 <h2 className="text-3xl font-extrabold text-transparent
                 bg-gradient-to-r from-sky-700 to-red-500 bg-clip-text 
-                sm:text-5xl">Thank you for visitiong my portofolio website</h2>
+                sm:text-5xl">Thank you for visiting my portofolio page</h2>
 
                 <p className="mx-auto mt-4 max-w-sm text-white">
                     If you are interested in my works, contact me now by clicking the button below
