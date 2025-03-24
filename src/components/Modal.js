@@ -47,7 +47,7 @@ export default function Modal({open, children, close}) {
             <h1 className="xs:text-3xl font-bold text-amber-500">PERMISSION</h1>
             <br></br>
             <p className={`text-${theme}`} >Click blue button below to download my resume, i make sure theres no malware or danger file on it 
-            <a className="underline text-justify text-sky-500 cursor-pointer" href="https://drive.google.com/drive/folders/14YMTm57JBtQRZDtn9AsMu67C4BEYlPVv?usp=sharing" target="_blank" rel="noreferrer"> If you afraid, you could click this link to download it through the gdrive link</a></p>
+            <a className="underline text-justify text-sky-500 cursor-pointer" href="https://drive.google.com/file/d/1GzVWzEk09rYoMt0qfAe1Gzagxjr1ZJBA/view?usp=sharing" target="_blank" rel="noreferrer"> If you afraid, you could click this link to download it through the gdrive link</a></p>
 
             <div className="lg:w-1/2 xs:w-full mt-5 flex lg:gap-0 xs:gap-5 justify-between">
                 <button onClick={close} className={`px-6 py-2 border rounded ${theme} border-sky-500 hover:text-sky-500`}>Cancel</button>
