@@ -13,6 +13,18 @@
             "Attribute": ["Aplikasi web responsif", "Web fluid", "Program AI Backend", "Pemilihan AI"]
         },
         {
+            "Img": "/img/fadoc.png",
+            "Title": "FADOC : Sistem Manajemen Artikel",
+            "Description": "FADOC adalah aplikasi web sistem manajemen yang membantu Anda menemukan artikel kesayangan Anda",
+            "Link": "https://article-management-system-five.vercel.app/",
+            "cover_img": "/img/fadoc.png",
+            "home_img": "/img/fadoc_home.png",
+            "Category": "Web",
+            "Rate": "A",
+            "Technology": ["Next", "Typescript", "REST API"],
+            "Attribute": ["Canggih", "Data Terintegrasi", "Responsif", "Arsitektur Bersih"]
+        },        
+        {
             "Img": "/img/dasa.png",
             "Title": "DASA: Delta Sentiment Analysis",
             "Description": "DASA adalah aplikasi yang terdiri dari empat model AI analisis sentimen yang dapat membantu mendeteksi sentimen dari sebuah teks.",
