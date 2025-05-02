@@ -14,9 +14,21 @@
             "Attribute" : ["Responsive web app", "Fluid web", "Backend Ai Program", "AI Selection"]
         },
         {
+            "Img" : "/img/fadoc.png",
+            "Title" : "FADOC : Article Management System",
+            "Description" : "FADOC is an management system web app that help you to discover you beloved article",
+            "Link" : "https://article-management-system-five.vercel.app/",
+            "cover_img" : "/img/fadoc.png",
+            "home_img" : "/img/fadoc_home.png",
+            "Category": "Web",
+            "Rate" : "A",
+            "Technology" : ["Next", "Typescript", "REST API"],
+            "Attribute" : ["Sophisicated", "Integrated Data", "Responsive", "Clean Architecture"]
+        },
+        {
             "Img" : "/img/dasa.png",
             "Title" : "DASA : Delta Sentiment Analysis",
-            "Description" : "DASA in an application that consist of four sentiment analysis ai model that could help for detecting sentiment form a text",
+            "Description" : "DASA is an application that consist of four sentiment analysis ai model that could help for detecting sentiment form a text",
             "Link" : "https://github.com/Fadhyoung",
             "cover_img" : "/img/dasa.png",
             "home_img" : "/img/dasa_home.png",
@@ -102,6 +114,18 @@
                 "Rate": "A",
                 "Technology": ["Python", "Js Native", "Flask"],
                 "Attribute": ["Aplikasi web responsif", "Web fluid", "Program AI Backend", "Pemilihan AI"]
+            },
+            {
+                "Img" : "/img/fadoc.png",
+                "Title" : "FADOC : Article Management System",
+                "Description" : "FADOC is an management system web app that help you to discover you beloved article",
+                "Link" : "https://article-management-system-five.vercel.app/",
+                "cover_img" : "/img/fadoc.png",
+                "home_img" : "/img/fadoc_home.png",
+                "Category": "Web",
+                "Rate" : "A",
+                "Technology" : ["Next", "Typescript", "REST API"],
+                "Attribute" : ["Sophisicated", "Integrated Data", "Responsive", "Clean Architecture"]
             },
             {
                 "Img": "/img/dasa.png",
