@@ -104,23 +104,14 @@ code {
 
 /* THEME TOGGLE */
 
-.dark-theme {
-  background-color: var(--blue);
-  color: var(--white)
-}
+.dark-theme { background-color: var(--blue); color: var(--white) }
+.light-theme { background-color: var(--white); color: var(--blue) }
 
-.light-theme {
-  background-color: var(--white);
-  color: var(--blue)
-}
+.border-dark-theme { border-color: var(--white); }
+.border-light-theme { border-color: var(--blue); }
 
-.border-dark-theme {
-  border-color: var(--white);
-}
-
-.border-light-theme {
-  border-color: var(--blue);
-}
+.text-light-theme { color: var(--blue); }
+.text-dark-theme { color: var(--white); }
 
 /* END ============= */
 
